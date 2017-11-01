@@ -2,7 +2,7 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (burger.js) to use its database functions.
+// Import the model (closet.js) to use its database functions.
 var closet = require("../models/closet.js");
 
 
@@ -10,19 +10,19 @@ var closet = require("../models/closet.js");
 
 router.get("/", function(req, res) {
   closet.selectAll(function(data) {
-    var hbsObject = {
-      clothes: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
-  });
+  //   var hbsObject = {
+  //     clothes: data
+  //   };
+  //   console.log(hbsObject);
+  //   res.render("index", hbsObject);
+  // });
 });
 
 router.post("/api/closet", function(req, res) {
   closet.insertOne([
-    "burger_name"
-  ], [
-    req.body.name
+  //   "burger_name"
+  // ], [
+  //   req.body.name
   ], function(result) {
     // Send back the ID of the new burger
     res.json({ id: result.insertId });
