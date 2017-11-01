@@ -1,0 +1,33 @@
+{
+  "name": "mydailycloset",
+  "version": "1.0.0",
+  "description": "Closet Organizer",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HelloBetafish/MyDailyCloset.git"
+  },
+  "keywords": [
+    "closet",
+    "clothes",
+    "organizer",
+    "outfits"
+  ],
+  "author": "Darnell Willis, Reyna Perez, Bethany Pfeister, Trent Cooper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HelloBetafish/MyDailyCloset/issues"
+  },
+  "homepage": "https://github.com/HelloBetafish/MyDailyCloset#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.10",
+    "mysql": "^2.15.0"
+  }
+}
