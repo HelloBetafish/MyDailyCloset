@@ -1,0 +1,56 @@
+#pic2 {
+	position:relative; 
+	margin-top:15%; 
+	left:35%; 
+	z-index:5;
+	
+}
+
+#pic1 {
+	position:absolute;
+	top:05%; 
+	left:15%; 
+
+}
+#pic3 {
+	position:absolute; 
+	top:55%; 
+	left:68%; 
+	z-index:3;
+	
+}
+
+#login{
+	position:absolute; 
+	margin-top:5%; 
+	left:41%; 
+	width: 50%;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+  color: #ffffff;
+  background-color: #3276b1;
+  border-color: #285e8e;
+}
+
+.omb_forgotPwd{
+	margin-top:5px;
+	font-size: 11px;
+	margin-left:22px;
+}
+.checkbox{
+	top:5px;
+	font-size: 11px;
+}
+
+#username{
+	margin-bottom: 5px;
+
+}
+#password{
+	margin-bottom: 5px;
+
+}
