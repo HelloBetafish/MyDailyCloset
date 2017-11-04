@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Daily Closet page 2</title>
+
+
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <!--Fonts-->
+ <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Vollkorn" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Cinzel|Tangerine" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Quattrocento|Varela" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	  <!--Jquery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!--Boostrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+     <!-- jQuery latest library -->
+    
+     <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+      <!-- bootstrap js library -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     
+     <!-- jQuery latest library -->
+   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+</head>
+<body>
+
+
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">MyDailyCloset</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+      <li><a href="#">Page 4</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+
+<div class="row">
+ <div class="col-md-12"> 
+  <h4 id="todaysoutfit">T O D A Y ' S  O U T F I T</h4>
+ </div>
+</div>
+
+<div class="row">
+ <div class="col-md-6"> 
+  <h5>Today's day</h5>
+ </div>
+ <div  class="col-md-6"> 
+  <h5 id="text">What would like to do?</h5>
+ </div>
+</div>  
+
+ 
+
+
+<div class="row">
+    <div class="col-md-4">
+    <div id="outfit"></div>
+    <img id="redoutfit" src="Red-Outfit.jpg" width="400" height="400" class='closet-image'>
+    </div>
+
+    <div class="col-md-4">
+    <div id="calendar"></div>
+    </div>
+
+    <div class="col-md-2">
+      <h5 id="title">View full closet?</h5>
+    </div>
+
+    <div class="col-md-1">
+    <div id="buttons"></div>
+    <button id="btn1" type="button" class="btn btn-warning">Warning</button>
+    <button id="btn2" type="button" class="btn btn-warning">Warning</button>
+    <button id="btn3" type="button" class="btn btn-warning">Warning</button>
+    </div>
+</div>
+
+
+ <!--- Illustrations in the bottom -->
+<div  class="container">
+   <div class="row">
+     <!--- first column start -->
+     <div class="col-md-6">
+       <img id="blouseimg" src="blousehanger3.jpg" width="255" height="255" class='closet-image'>
+       <img id="jacket" src="topmale.jpg" width="310" height="310" class='closet-image'>
+     </div>
+     <div class="col-md-6">
+       <img id="shoesmen" src="shoesmen2.jpg" width="255" height="255" class='closet-image'>
+       <img id="shoeswoman" src="shoeswoman2.jpg" width="235" height="235" class='closet-image'>
+     </div>
+   </div>
+   
+
+   <div class="row">
+     <div class="col-md-6">
+       <img id="jeans" src="botton3.jpg" width="180" height="255" class='closet-image'>
+       <img id="skirt" src="skirt.jpg" width="270" height="270" class='closet-image'>
+     </div>
+     <div class="col-md-6">
+       <img id="accessoriesimg1" src="accesories1.jpg" width="255" height="255" class='closet-image'>
+     </div>
+   </div>
+</div>
+<!--end of the Illustrations container-->
+
+
+ 
+ 
+   
+  <script type="text/javascript">   
+
+
+
+  !function() {
+
+  var today = moment();
+
+  function Calendar(selector, events) {
+    this.el = document.querySelector(selector);
+    this.events = events;
+    this.current = moment().date(1);
+    this.draw();
+    var current = document.querySelector('.today');
+    if(current) {
+      var self = this;
+      window.setTimeout(function() {
+        self.openDay(current);
+      }, 500);
+    }
+  }
+
+  Calendar.prototype.draw = function() {
+    //Create Header
+    this.drawHeader();
+
+    //Draw Month
+    this.drawMonth();
+
+    this.drawLegend();
+  }
+
+  Calendar.prototype.drawHeader = function() {
+    var self = this;
+    if(!this.header) {
+      //Create the header elements
+      this.header = createElement('div', 'header');
+      this.header.className = 'header';
+
+      this.title = createElement('h1');
+
+      var right = createElement('div', 'right');
+      right.addEventListener('click', function() { self.nextMonth(); });
+
+      var left = createElement('div', 'left');
+      left.addEventListener('click', function() { self.prevMonth(); });
+
+      //Append the Elements
+      this.header.appendChild(this.title); 
+      this.header.appendChild(right);
+      this.header.appendChild(left);
+      this.el.appendChild(this.header);
+    }
+
+    this.title.innerHTML = this.current.format('MMMM YYYY');
+  }
+
+  Calendar.prototype.drawMonth = function() {
+    var self = this;
+    
+    this.events.forEach(function(ev) {
+     ev.date = self.current.clone().date(Math.random() * (29 - 1) + 1);
+    });
+    
+    
+    if(this.month) {
+      this.oldMonth = this.month;
+      this.oldMonth.className = 'month out ' + (self.next ? 'next' : 'prev');
+      this.oldMonth.addEventListener('webkitAnimationEnd', function() {
+        self.oldMonth.parentNode.removeChild(self.oldMonth);
+        self.month = createElement('div', 'month');
+        self.backFill();
+        self.currentMonth();
+        self.fowardFill();
+        self.el.appendChild(self.month);
+        window.setTimeout(function() {
+          self.month.className = 'month in ' + (self.next ? 'next' : 'prev');
+        }, 16);
+      });
+    } else {
+        this.month = createElement('div', 'month');
+        this.el.appendChild(this.month);
+        this.backFill();
+        this.currentMonth();
+        this.fowardFill();
+        this.month.className = 'month new';
+    }
+  }
+
+  Calendar.prototype.backFill = function() {
+    var clone = this.current.clone();
+    var dayOfWeek = clone.day();
+
+    if(!dayOfWeek) { return; }
+
+    clone.subtract('days', dayOfWeek+1);
+
+    for(var i = dayOfWeek; i > 0 ; i--) {
+      this.drawDay(clone.add('days', 1));
+    }
+  }
+
+  Calendar.prototype.fowardFill = function() {
+    var clone = this.current.clone().add('months', 1).subtract('days', 1);
+    var dayOfWeek = clone.day();
+
+    if(dayOfWeek === 6) { return; }
+
+    for(var i = dayOfWeek; i < 6 ; i++) {
+      this.drawDay(clone.add('days', 1));
+    }
+  }
+
+  Calendar.prototype.currentMonth = function() {
+    var clone = this.current.clone();
+
+    while(clone.month() === this.current.month()) {
+      this.drawDay(clone);
+      clone.add('days', 1);
+    }
+  }
+
+  Calendar.prototype.getWeek = function(day) {
+    if(!this.week || day.day() === 0) {
+      this.week = createElement('div', 'week');
+      this.month.appendChild(this.week);
+    }
+  }
+
+  Calendar.prototype.drawDay = function(day) {
+    var self = this;
+    this.getWeek(day);
+
+    //Outer Day
+    var outer = createElement('div', this.getDayClass(day));
+    outer.addEventListener('click', function() {
+      self.openDay(this);
+    });
+
+    //Day Name
+    var name = createElement('div', 'day-name', day.format('ddd'));
+
+    //Day Number
+    var number = createElement('div', 'day-number', day.format('DD'));
+
+
+    //Events
+    var events = createElement('div', 'day-events');
+    this.drawEvents(day, events);
+
+    outer.appendChild(name);
+    outer.appendChild(number);
+    outer.appendChild(events);
+    this.week.appendChild(outer);
+  }
+
+  Calendar.prototype.drawEvents = function(day, element) {
+    if(day.month() === this.current.month()) {
+      var todaysEvents = this.events.reduce(function(memo, ev) {
+        if(ev.date.isSame(day, 'day')) {
+          memo.push(ev);
+        }
+        return memo;
+      }, []);
+
+      todaysEvents.forEach(function(ev) {
+        var evSpan = createElement('span', ev.color);
+        element.appendChild(evSpan);
+      });
+    }
+  }
+
+  Calendar.prototype.getDayClass = function(day) {
+    classes = ['day'];
+    if(day.month() !== this.current.month()) {
+      classes.push('other');
+    } else if (today.isSame(day, 'day')) {
+      classes.push('today');
+    }
+    return classes.join(' ');
+  }
+
+  Calendar.prototype.openDay = function(el) {
+    var details, arrow;
+    var dayNumber = +el.querySelectorAll('.day-number')[0].innerText || +el.querySelectorAll('.day-number')[0].textContent;
+    var day = this.current.clone().date(dayNumber);
+
+    var currentOpened = document.querySelector('.details');
+
+    //Check to see if there is an open detais box on the current row
+    if(currentOpened && currentOpened.parentNode === el.parentNode) {
+      details = currentOpened;
+      arrow = document.querySelector('.arrow');
+    } else {
+      //Close the open events on differnt week row
+      //currentOpened && currentOpened.parentNode.removeChild(currentOpened);
+      if(currentOpened) {
+        currentOpened.addEventListener('webkitAnimationEnd', function() {
+          currentOpened.parentNode.removeChild(currentOpened);
+        });
+        currentOpened.addEventListener('oanimationend', function() {
+          currentOpened.parentNode.removeChild(currentOpened);
+        });
+        currentOpened.addEventListener('msAnimationEnd', function() {
+          currentOpened.parentNode.removeChild(currentOpened);
+        });
+        currentOpened.addEventListener('animationend', function() {
+          currentOpened.parentNode.removeChild(currentOpened);
+        });
+        currentOpened.className = 'details out';
+      }
+
+      //Create the Details Container
+      details = createElement('div', 'details in');
+
+      //Create the arrow
+      var arrow = createElement('div', 'arrow');
+
+      //Create the event wrapper
+
+      details.appendChild(arrow);
+      el.parentNode.appendChild(details);
+    }
+
+    var todaysEvents = this.events.reduce(function(memo, ev) {
+      if(ev.date.isSame(day, 'day')) {
+        memo.push(ev);
+      }
+      return memo;
+    }, []);
+
+    this.renderEvents(todaysEvents, details);
+
+    arrow.style.left = el.offsetLeft - el.parentNode.offsetLeft + 27 + 'px';
+  }
+
+  Calendar.prototype.renderEvents = function(events, ele) {
+    //Remove any events in the current details element
+    var currentWrapper = ele.querySelector('.events');
+    var wrapper = createElement('div', 'events in' + (currentWrapper ? ' new' : ''));
+
+    events.forEach(function(ev) {
+      var div = createElement('div', 'outfits');
+      var square = createElement('div', 'event-category ' + ev.color);
+      var span = createElement('span', '', ev.eventName);
+
+      div.appendChild(square);
+      div.appendChild(span);
+      wrapper.appendChild(div);
+    });
+
+    if(!events.length) {
+      var div = createElement('div', 'event empty');
+      var span = createElement('span', '', 'choose new Outfit');
+
+      div.appendChild(span);
+      wrapper.appendChild(div);
+    }
+
+    if(currentWrapper) {
+      currentWrapper.className = 'events out';
+      currentWrapper.addEventListener('webkitAnimationEnd', function() {
+        currentWrapper.parentNode.removeChild(currentWrapper);
+        ele.appendChild(wrapper);
+      });
+      currentWrapper.addEventListener('oanimationend', function() {
+        currentWrapper.parentNode.removeChild(currentWrapper);
+        ele.appendChild(wrapper);
+      });
+      currentWrapper.addEventListener('msAnimationEnd', function() {
+        currentWrapper.parentNode.removeChild(currentWrapper);
+        ele.appendChild(wrapper);
+      });
+      currentWrapper.addEventListener('animationend', function() {
+        currentWrapper.parentNode.removeChild(currentWrapper);
+        ele.appendChild(wrapper);
+      });
+    } else {
+      ele.appendChild(wrapper);
+    }
+  }
+
+  Calendar.prototype.drawLegend = function() {
+    var legend = createElement('div', 'legend');
+    var calendars = this.events.map(function(e) {
+      return e.calendar + '|' + e.color;
+    }).reduce(function(memo, e) {
+      if(memo.indexOf(e) === -1) {
+        memo.push(e);
+      }
+      return memo;
+    }, []).forEach(function(e) {
+      var parts = e.split('|');
+      var entry = createElement('span', 'entry ' +  parts[1], parts[0]);
+      legend.appendChild(entry);
+    });
+    this.el.appendChild(legend);
+  }
+
+  Calendar.prototype.nextMonth = function() {
+    this.current.add('months', 1);
+    this.next = true;
+    this.draw();
+  }
+
+  Calendar.prototype.prevMonth = function() {
+    this.current.subtract('months', 1);
+    this.next = false;
+    this.draw();
+  }
+
+  window.Calendar = Calendar;
+
+  function createElement(tagName, className, innerText) {
+    var ele = document.createElement(tagName);
+    if(className) {
+      ele.className = className;
+    }
+    if(innerText) {
+      ele.innderText = ele.textContent = innerText;
+    }
+    return ele;
+  }
+}();
+
+!function() {
+  var data = [
+    { eventName: 'Red outfit office meeting', calendar: 'Work', color: 'orange' },
+    { eventName: 'black pants with leather jacket  - Jr. Web Developer', calendar: 'Work', color: 'orange' },
+    { eventName: 'Blue skirt and white blouse with red necklace / conference with japanese', calendar: 'Work', color: 'orange' },
+    { eventName: 'Black dress, gold heels and pearl necklace - Dinner w/ Marketing', calendar: 'Work', color: 'orange' },
+
+    { eventName: 'Jeans and colorfull shirt - Game vs Portalnd', calendar: 'Sports', color: 'orange' },
+    { eventName: 'white shorts and pink top and tennis shoes and Game vs Houston', calendar: 'Sports', color: 'orange' },
+    { eventName: 'warm blue sweater and jeans - Game vs Denver', calendar: 'Sports', color: 'orange' },
+    { eventName: 'Yellow jacket, jeans and red sandals - Game vs San Degio', calendar: 'Sports', color: 'orange' },
+
+    { eventName: 'Orange dresss with beige heels - School Play', calendar: 'Kids', color: 'orange' },
+    { eventName: 'Flowerly blouse, white skirt and blue flat shoes - Parent/Teacher Conference', calendar: 'Kids', color: 'orange' },
+    { eventName: 'Jeans, blue shirt and blue tennis shoes - Pick up from Soccer Practice', calendar: 'Kids', color: 'orange' },
+    { eventName: 'colorful outfit - Ice Cream Night', calendar: 'Kids', color: 'orange' },
+
+    { eventName: 'My regular casual outfit with blue hat Free Tamale Night', calendar: 'Other', color: 'orange' },
+    { eventName: 'Fushia pink shirt and jeans - Bowling Team', calendar: 'Other', color: 'orange' },
+    { eventName: 'White dress and pink flat shoes - Teach Kids to Code', calendar: 'Other', color: 'orange' },
+    { eventName: 'Black pants, purple blouse, black leather jacket  and black boot - Startup Weekend', calendar: 'Other', color: 'orange' }
+  ];
+
+
+
+  function addDate(ev) {
+    
+  }
+
+  var calendar = new Calendar('#calendar', data);
+
+}();
+ 
+
+
+ 
+ </script>
+
+
+
+</body>
+</html>
