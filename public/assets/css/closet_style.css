@@ -58,11 +58,11 @@
 }
 
 /*--------------CREATE NEW OUTFIT-----------------*/
-
 body{
-	
-	background-color: white;
+
+  background-color: white;
 }
+
 
 .navbar{
 	background-color: lightgray;
@@ -199,11 +199,7 @@ h3{
 /*--------------TODAY'S OUTFIT-----------------------*/
 
 
-body{
-/*	
-	background-color: #340833;*/
-	background-color: white;
-}
+
 
 
 *, *:before, *:after {
@@ -707,3 +703,104 @@ font-family: 'Comfortaa';
 	margin-bottom: 60px;
 }
 
+/*------------------CLOSET PAGE-------------------*/
+
+*, *:before, *:after {
+-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+
+body {
+ overflow: scroll;
+ font-family: 'HelveticaNeue-UltraLight', 'Helvetica Neue UltraLight', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+ font-weight: 100;
+ color: white;
+ margin: 0;
+ padding: 0;
+ background: white;
+ -webkit-touch-callout: none;
+ -webkit-user-select: none;
+ -khtml-user-select: none;
+ -moz-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+}
+
+.navbar{
+  background-color: lightgray;
+  height: 60px;
+  margin-bottom:30px;
+}
+
+.navbar-brand{
+  color:white;
+}
+
+
+
+ #mycloset{
+  margin-top: 40px;
+  color:white;
+  border-radius: 5px;
+  background-color:#331033;
+  padding-left:100px;
+  padding-top:20px;
+  padding-bottom: 20px;
+  font-family: 'Impact';
+  font-size: 55px;
+  margin-bottom: 40px;
+  margin-right:890px;
+  letter-spacing: 10px;
+}
+
+
+#clothing{
+  font-family: 'Comfortaa';
+  font-size:35px;
+  margin-top:50px;
+  color:black;
+  margin-bottom: 10px;
+  font-weight: bold;
+  margin-left:18%;
+/*  text-align: 10%;*/
+}
+
+
+#topscontainer{
+  background-color:#f0f0f0;
+}
+#text{
+  margin-top:80px;
+  font-size: 30px;
+  margin-left: 260px;
+  font-family: 'Varela', sans-serif;
+}
+
+
+
+#blouse{
+
+  margin-top:-60px;
+   border-radius: 50%;
+   outline-style: solid;
+  /*margin-left: 59%;
+  */
+
+}
+
+#bottomimg{
+  margin-top: -50px;
+  
+
+}
+
+#shoesimg{
+  margin-top: -220px;
+  
+
+}
+
+#accessoriesimg{
+  margin-top: -220px;
+  
+
+}
