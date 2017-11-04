@@ -41,12 +41,16 @@ function objToSql(ob) {
 
 // Object for all our SQL statement functions.
 var orm = {
-  selectAll: function(tableInput, cb) {
+  select: function(tableInput, condition, cb) {
     var queryString = "SELECT * FROM " + tableInput + ";";
+    queryString += " WHERE ";
+    queryString += condition;
+
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;
       }
+
       cb(result);
     });
   },
