@@ -2,24 +2,45 @@
 var orm = require("../config/orm.js");
 
 var closet = {
-  selectAll: function(cb) {
-    orm.selectAll("clothes", function(res) {
+  displayType: function(condition, cb) {
+    orm.select("clothes", condition, function(res) {
+      cb(res);
+    });
+  },
+  displayOutfits: function(condition, cb) {
+    orm.select("saved_outfits", condition, function(res) {
       cb(res);
     });
   },
   // The variables cols and vals are arrays.
-  create: function(cols, vals, cb) {
+  uploadClothes: function(cols, vals, cb) {
     orm.create("clothes", cols, vals, function(res) {
       cb(res);
     });
   },
-  update: function(objColVals, condition, cb) {
+    // The variables cols and vals are arrays.
+  uploadOutfit: function(cols, vals, cb) {
+    orm.create("saved_outfits", cols, vals, function(res) {
+      cb(res);
+    });
+  },
+  favClothes: function(objColVals, condition, cb) {
     orm.update("clothes", objColVals, condition, function(res) {
       cb(res);
     });
   },
-  delete: function(condition, cb) {
+  favOutfits: function(objColVals, condition, cb) {
+    orm.update("saved_outfits", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+  deleteClothes: function(condition, cb) {
     orm.delete("clothes", condition, function(res) {
+      cb(res);
+    });
+  },
+  deleteOutfit: function(condition, cb) {
+    orm.delete("saved_outfits", condition, function(res) {
       cb(res);
     });
   }
