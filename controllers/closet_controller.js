@@ -21,12 +21,12 @@ router.get("/:userID", function(req, res) {
    // refers to .handlebars file that will be inserted into main.handlebars.   // closet refers to closet.handlebars file that will cycle through mySQL and display images
   });
 
-router.get("/createOutfit:userID", function(req, res) {
-    res.render("index_CreateOutfit");
+router.get("/createOutfit/:userID", function(req, res) {
+    res.render("create");
    // refers to .handlebars file that will be inserted into main.handlebars.   // closet refers to closet.handlebars file that will cycle through mySQL and display images
   });
 
-router.get("/closet:userID", function(req, res) {
+router.get("/closet/:userID", function(req, res) {
     res.render("index_Closet");
   // refers to .handlebars file that will be inserted into main.handlebars.  // closet refers to closet.handlebars file that will cycle through mySQL and display images
   });
