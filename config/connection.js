@@ -10,7 +10,7 @@ else {
     // port: 3306,
     host: "localhost",
     user: "root",
-    password: "r00t",
+    password: "",
     database: "closet_db"
   });
 };

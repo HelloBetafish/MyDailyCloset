@@ -33,6 +33,7 @@ router.get("/createOutfit/:userID", function(req, res) {
 
    // refers to .handlebars file that will be inserted into main.handlebars.   // closet refers to closet.handlebars file that will cycle through mySQL and display images
   });
+});
 
 router.get("/closet/:userID", function(req, res) {
     var condition = "userID = " + req.params.userID + " && clothestype = shirts";
@@ -44,6 +45,7 @@ router.get("/closet/:userID", function(req, res) {
     console.log(hbsObject);
     res.render("closet", hbsObject);
   });
+});
 
 router.get("/outfits/:userID", function(req, res) {
   var condition = "userID = " + req.params.userID;
