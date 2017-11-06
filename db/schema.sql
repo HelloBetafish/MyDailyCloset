@@ -21,7 +21,7 @@ FOREIGN KEY(userID) REFERENCES users(userID)
 
 CREATE TABLE saved_outfits(
 outfitsID int NOT NULL auto_increment,
-oufitspath VARCHAR(100),
+outfitspath VARCHAR(100),
 favorite BOOLEAN NOT NULL DEFAULT 0,
 userID int NOT NULL,
 PRIMARY KEY(outfitsID),
