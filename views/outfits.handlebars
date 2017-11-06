@@ -1,0 +1,39 @@
+<div class="container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">MyDailyCloset</a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+      <li><a href="#">Page 4</a></li>
+    </ul>
+  </div>
+</nav>
+</div>
+
+<div class="row">
+ <div class="col-md-12"> 
+  <h4 id="mycloset">MY CLOSET</h4>
+ </div>
+</div>
+
+<h2>My Saved Outfits!</h2>
+
+<ul>
+  {{#each outfits}}
+      <li>
+        <img src="{{outfitspath}}" alt="outfit">
+        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>        
+        <button type="button" class="btn btn-default" aria-label="Left Align">
+        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+        </button>
+      </li>
+  {{/each}}
+</ul>
+

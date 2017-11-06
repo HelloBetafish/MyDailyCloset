@@ -22,25 +22,47 @@ router.get("/:userID", function(req, res) {
   });
 
 router.get("/createOutfit/:userID", function(req, res) {
-    res.render("create");
+    var condition = "userID = " + req.params.userID + " && clothestype = shirts";
+    closet.displayType(condition, function(data) {
+    var hbsObject = {
+    shirts: data
+  // clothes refers to var name in closet.handlebars
+    };
+    console.log(hbsObject);
+    res.render("create", hbsObject);
+
    // refers to .handlebars file that will be inserted into main.handlebars.   // closet refers to closet.handlebars file that will cycle through mySQL and display images
   });
 
 router.get("/closet/:userID", function(req, res) {
-    res.render("index_Closet");
-  // refers to .handlebars file that will be inserted into main.handlebars.  // closet refers to closet.handlebars file that will cycle through mySQL and display images
+    var condition = "userID = " + req.params.userID + " && clothestype = shirts";
+    closet.displayType(condition, function(data) {
+    var hbsObject = {
+    shirts: data
+  // clothes refers to var name in closet.handlebars
+    };
+    console.log(hbsObject);
+    res.render("closet", hbsObject);
   });
 
 router.get("/outfits/:userID", function(req, res) {
-    res.render("index_Outfits");
-   // refers to .handlebars file that will be inserted into main.handlebars.   // closet refers to closet.handlebars file that will cycle through mySQL and display images
+  var condition = "userID = " + req.params.userID;
+  closet.displayOutfits(condition, function(data) {
+    var hbsObject = {
+      outfits: data
+      // outfits refers to var name in the outfits.handlebars file
+    };
+    console.log(hbsObject);
+    res.render("outfits", hbsObject);
+    // outfits refers to outfits.handlebars file that will cycle through mySQL and display images
   });
+});
+
 
 
 router.get("/api/closet/:userID", function(req, res) {
-  var condition = "userID = " + req.params.userID;
-  // var clothestype = req.body.clothestype;
-  closet.displayType(function(data) {
+  var condition = "userID = " + req.params.userID + " && clothestype = shirts";
+  closet.displayType(condition, function(data) {
     var hbsObject = {
       clothes: data
   // clothes refers to var name in closet.handlebars
@@ -80,8 +102,8 @@ router.post("/api/outfits/:userID", function(req, res) {
   closet.uploadOutfit([
     "outfitspath", "userID"
   ], [
-    (outfitpath), req.params.userID
-  ], function(result) {
+    (outfitpath), r
+  ], function(result) {eq.params.userID
     // Send back the ID of the new burger
     res.json({ id: result.insertId });
   });
