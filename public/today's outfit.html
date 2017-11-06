@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>My Daily Closet page 2</title>
+	<title>Today's Outfit</title>
 
 
  <meta charset="utf-8">
@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+     <link rel="stylesheet" type="text/css" href="assets/css/closet_style.css">
 
      <!-- jQuery latest library -->
     
@@ -40,90 +40,75 @@
 <body>
 
 
-<div class="container">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">MyDailyCloset</a>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img id="logo" src="assets/mydailyclosetgray.jpg"></a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">full closet</a></li>
+        <li><a href="#">save outfits</a></li>
+        <li><a href="#">new outfit</a></li>
+        <li><a href="#">Page 4</a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-      <li><a href="#">Page 4</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
+  </nav>
+
 
 
 <div class="row">
  <div class="col-md-12"> 
-  <h4 id="todaysoutfit">T O D A Y ' S  O U T F I T</h4>
+  <h4 id="todaysoutfit">TODAY'S OUTFIT</h4>
  </div>
 </div>
 
-<div class="row">
- <div class="col-md-6"> 
-  <h5>Today's day</h5>
- </div>
- <div  class="col-md-6"> 
-  <h5 id="text">What would like to do?</h5>
- </div>
-</div>  
-
- 
+<div id="calendarbox" class="container">
+ <div class="row">
+   <div class="col-md-4"> 
+    <h5 class="text">Today Nov 8th</h5>
 
 
-<div class="row">
-    <div class="col-md-4">
-    <div id="outfit"></div>
-    <img id="redoutfit" src="Red-Outfit.jpg" width="400" height="400" class='closet-image'>
-    </div>
+      
+      <div id="outfit"></div>
+      <img id="redoutfit" src="assets/Red-Outfit.jpg" width="400" height="400" class='closet-image'>
+      </div>
 
-    <div class="col-md-4">
-    <div id="calendar"></div>
-    </div>
+  <!-- calendar-->
+      <div class="col-md-4">
+      <div id="calendar"></div>
+      </div>
 
-    <div class="col-md-2">
-      <h5 id="title">View full closet?</h5>
-    </div>
+  <!-- buttons-->  
+      <div class="col-md-4">
+          <h5 id="title">WHAT WOULD YOU LIKE TO DO NEXT?</h5>
+        <div class="col-md-3">
+            <h5 class="title1">View</h5>
+            <h5 class="title2">View</h5>
+            <h5 class="title3">Create</h5>
+        </div>
 
-    <div class="col-md-1">
-    <div id="buttons"></div>
-    <button id="btn1" type="button" class="btn btn-warning">Warning</button>
-    <button id="btn2" type="button" class="btn btn-warning">Warning</button>
-    <button id="btn3" type="button" class="btn btn-warning">Warning</button>
-    </div>
+        <div class="col-md-1">
+            <button id="btn1" type="button" class="btn btn-warning">full closet</button>
+            <button id="btn2" type="button" class="btn btn-warning">Saved Outfits</button>
+            <button id="btn3" type="button" class="btn btn-warning">New Outfit</button>
+        </div>
+     </div>
+   </div>
 </div>
-
-
  <!--- Illustrations in the bottom -->
-<div  class="container">
-   <div class="row">
-     <!--- first column start -->
-     <div class="col-md-6">
-       <img id="blouseimg" src="blousehanger3.jpg" width="255" height="255" class='closet-image'>
-       <img id="jacket" src="topmale.jpg" width="310" height="310" class='closet-image'>
-     </div>
-     <div class="col-md-6">
-       <img id="shoesmen" src="shoesmen2.jpg" width="255" height="255" class='closet-image'>
-       <img id="shoeswoman" src="shoeswoman2.jpg" width="235" height="235" class='closet-image'>
-     </div>
-   </div>
-   
 
    <div class="row">
-     <div class="col-md-6">
-       <img id="jeans" src="botton3.jpg" width="180" height="255" class='closet-image'>
-       <img id="skirt" src="skirt.jpg" width="270" height="270" class='closet-image'>
-     </div>
-     <div class="col-md-6">
-       <img id="accessoriesimg1" src="accesories1.jpg" width="255" height="255" class='closet-image'>
+     <div class="col-md-12">
+       <img id="blouseimg" src="assets/blousehanger3.jpg" width="200" height="200" class='closet-image'>
+       <img id="jacket" src="assets/topmale.jpg" width="200" height="200" class='closet-image'>
+       <img id="shoesmen" src="assets/shoes7.jpg" width="200" height="200" class='closet-image'>
+       <img id="shoeswoman" src="assets/shoeswoman2.jpg" width="180" height="180" class='closet-image'>
+       <img id="jeans" src="assets/botton3.jpg" width="100" height="160" class='closet-image'>
+       <img id="accessoriesimg1" src="assets/accesories1.jpg" width="140" height="160" class='closet-image'>
      </div>
    </div>
-</div>
+
 <!--end of the Illustrations container-->
 
 
@@ -475,7 +460,7 @@
     { eventName: 'My regular casual outfit with blue hat Free Tamale Night', calendar: 'Other', color: 'orange' },
     { eventName: 'Fushia pink shirt and jeans - Bowling Team', calendar: 'Other', color: 'orange' },
     { eventName: 'White dress and pink flat shoes - Teach Kids to Code', calendar: 'Other', color: 'orange' },
-    { eventName: 'Black pants, purple blouse, black leather jacket  and black boot - Startup Weekend', calendar: 'Other', color: 'orange' }
+    { eventName: 'Red-Outfit - Startup Weekend', calendar: 'Other', color: 'orange' }
   ];
 
 

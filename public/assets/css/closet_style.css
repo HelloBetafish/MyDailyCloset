@@ -64,17 +64,6 @@ body{
 }
 
 
-.navbar{
-	background-color: lightgray;
-	height: 60px;
-	margin-bottom:30px;
-	
-}
-
-.navbar-brand{
-	color:white;
-}
-
 .jumbotron{
 	background-color:lightgray;
 	margin-top:30px;
@@ -83,7 +72,7 @@ body{
 	
 }
 
-.carousel1{
+/*.carousel1{
 	margin-left: 150px;
 }
 .carousel-inner{
@@ -91,19 +80,22 @@ body{
 	margin:0 auto;
 
 }
+*/
 
- #createnewoutfit{
+
+
+ #newoutfitname{
  	margin-top: 40px;
 	color:white;
 	border-radius: 5px;
 	background-color:#331033;
 	padding-left:90px;
-	padding-top:20px;
-	padding-bottom: 20px;
+	padding-top:10px;
+	padding-bottom: 10px;
     font-family: 'Impact';
 	font-size: 55px;
 	margin-bottom: 90px;
-	margin-right:760px;
+	margin-right:790px;
 	letter-spacing: 7px;
 
 }
@@ -127,8 +119,8 @@ h3{
 }
 
 #woman{
- 	margin-top:-230px;
- 	margin-left:700;
+ 	margin-top:-180px;
+ 	margin-left:-80;
 }
 #thumb1{
 	margin-top: 20px;
@@ -159,7 +151,7 @@ h3{
  	margin-left:10%;
  }
 
- #carousel1{
+/* #carousel1{
  	position:relative;
  	z-index: 3;
 
@@ -173,7 +165,7 @@ h3{
 #carousel3{
 	position:relative;
 	left:120px;
-}
+}*/
 
 
 
@@ -194,6 +186,8 @@ h3{
 	margin-top: 170px;
 	margin-left: 110px;
 	width: 150px;
+  font-family: 'Comfortaa';
+  font-weight: bold;
 	}
 
 /*--------------TODAY'S OUTFIT-----------------------*/
@@ -223,22 +217,36 @@ body {
  user-select: none;
 }
 
-.navbar{
-	background-color: lightgray;
-	height: 60px;
-	margin-bottom:30px;
+.navbar-default{
+	background-color:#515254;
+  border-color: gray;
+  border-radius: 0;
+	/*height: 60px;
+	margin-bottom:30px;*/
 }
 
-.navbar-brand{
-	color:white;
+.nav.navbar-nav.navbar-right li a {
+    color: white;
 }
+
+
+
+#logo{
+  height: 230%;
+  margin-top: -14px;
+  padding-left: 100%;
+}
+
 
 
 #redoutfit{
-	margin-top: 60px;
-	margin-left: 60px;
-	margin-bottom:200px;
+	margin-left: -90px;
+
 	
+}
+
+#calendarbox{
+  margin-top:60px;
 }
 
 
@@ -614,12 +622,12 @@ body {
 	border-radius: 5px;
 	background-color:#331033;
 	padding-left:100px;
-	padding-top:20px;
-	padding-bottom: 20px;
-    font-family: 'Impact';
+	padding-top:10px;
+	padding-bottom: 10px;
+  font-family: 'Impact';
 	font-size: 55px;
 	margin-bottom: 40px;
-	margin-right:590px;
+	margin-right:860px;
 	letter-spacing: 10px;
 }
 
@@ -634,27 +642,25 @@ body {
   font-weight: bold;
 	margin-left:165px;
 }
-#title{
-font-family: 'Comfortaa';
-}
 
-#text{
-	margin-top:80px;
+
+.text{
 	font-size: 30px;
-	margin-left: 260px;
-    font-family: 'Varela', sans-serif;
+	margin-left:25px;
+  margin-top:50px;
+    font-family: 'Impact';
 }
 
 #jacket{
-	margin-top: -270px;
-	margin-left: -30px
-	z-index:2;
+	margin-top: 60px;
+	margin-left: 15px;
+
 }
 
 #blouseimg{
 
 	margin-top: 70px;
-	margin-left: 340px;
+	margin-left: 420px;
 	z-index: 1;
 
 }
@@ -665,42 +671,90 @@ font-family: 'Comfortaa';
 
 #shoesmen{
 	margin-top:60px;
-	margin-left:40px;
+	margin-left:60px;
 
 }
 
 #shoeswoman{
  	margin-top:50px;
- 	margin-left:900;
+ margin-left:2%;
 }
 
 #skirt{
-  margin-top: -330px;
-  margin-left: 80%;
-  z-index: 1;
+  margin-top: -20%;
+  margin-left: 145%;
+  /*z-index: 1;*/
 
 }
 #jeans{
 
-  margin-top: 30px;
-  margin-left: 30px;
+  margin-top: 70px;
+  margin-left: -1210px;
 
 }
 #accessoriesimg1{
-  margin-top: 30px;
-  margin-left: 60%;
+  margin-top: 50px;
+  margin-left: 25px;
 
+}
+
+/*#boxbuttons{
+  background-color:lightgray;
+  width:70%;
+}*/
+
+#title{
+  margin:160px 0 0 120px;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.title1{
+  margin-top: 60px;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 110px;
+
+}
+.title2{
+  margin-top: 60px;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 110px;
+
+}
+.title3{
+  margin-top: 55px;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 110px;
 
 }
 
 #btn1{
-	margin-bottom:60px;
-	margin-top: 40px;
+	margin-top: 50px;
+  font-family: 'Comfortaa';
+  font-weight: bold;
 
 }
 
 #btn2{
-	margin-bottom: 60px;
+	margin-top: 40px;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+
+
+}
+
+#btn3{
+  margin-top: 40px;
+  font-family: 'Comfortaa';
+  font-weight: bold;
+  
 }
 
 /*------------------CLOSET PAGE-------------------*/
@@ -725,15 +779,7 @@ body {
  user-select: none;
 }
 
-.navbar{
-  background-color: lightgray;
-  height: 60px;
-  margin-bottom:30px;
-}
 
-.navbar-brand{
-  color:white;
-}
 
 
 
@@ -742,32 +788,98 @@ body {
   color:white;
   border-radius: 5px;
   background-color:#331033;
-  padding-left:100px;
-  padding-top:20px;
-  padding-bottom: 20px;
+  padding-left:120px;
+  padding-top:10px;
+  padding-bottom: 10px;
   font-family: 'Impact';
   font-size: 55px;
   margin-bottom: 40px;
-  margin-right:890px;
+  margin-right:960px;
   letter-spacing: 10px;
 }
 
 
-#clothing{
-  font-family: 'Comfortaa';
-  font-size:35px;
-  margin-top:50px;
-  color:black;
-  margin-bottom: 10px;
-  font-weight: bold;
-  margin-left:18%;
-/*  text-align: 10%;*/
+#topstitle{
+  margin-left:-15px;
+  margin-top: 50px
+ 
 }
 
 
-#topscontainer{
-  background-color:#f0f0f0;
+#topbox{
+  background-color:#dddfe5;
+  margin-bottom: 100px;
 }
+
+#topmale{
+  margin-left: 100px;
+  margin-top: -110px;
+
+}
+
+#blouse3{
+  margin-top: -110px;
+   
+}
+
+#bottomtitle{
+  margin-left:-15px;
+  margin-bottom: 20px;
+
+}
+
+#jeans3{
+  margin-left: 160px;
+  margin-top: -110px;
+
+}
+
+#skirt1{
+  
+   margin-top:-110px;
+   margin-left:10px;
+}
+
+
+
+#shoesman{
+  margin-top:-100px;
+   margin-left:110px;
+   
+}
+#shoeswoman1{
+  margin-top:-100px;
+   
+}
+
+#accessman{
+   margin-top:-100px;
+   margin-left:210px;
+
+}
+
+#accesswoman{
+   margin-top:-100px;
+   margin-left:5px;
+
+}
+
+
+/*#accessoriesimg{
+   margin-top:-70px;
+   border-radius: 50%;
+   outline-style: solid;
+   margin-left:-20%;
+   /*margin-bottom: 200px;*/
+
+
+.box1{
+  background-color:gray;
+  height: 60%;
+  width: 100%;
+}
+
+
 #text{
   margin-top:80px;
   font-size: 30px;
@@ -776,16 +888,6 @@ body {
 }
 
 
-
-#blouse{
-
-  margin-top:-60px;
-   border-radius: 50%;
-   outline-style: solid;
-  /*margin-left: 59%;
-  */
-
-}
 
 #bottomimg{
   margin-top: -50px;
@@ -800,7 +902,58 @@ body {
 }
 
 #accessoriesimg{
-  margin-top: -220px;
-  
+  margin-top: -220px; 
 
 }
+
+/*------------------YOUR OUTFIT-----------------------*/
+
+/*.thumbnail{        
+    width: 400px; */
+    /*// or you could use percentage values for responsive layout*/
+   /* // width : 100%;*/
+   /* height: 700px;
+    overflow: auto;
+    text-align:center;*/
+    /*margin-left: 30px;*/
+    /*margin-right:50px;
+
+}*/
+
+/*.thumbnail img{*/
+    /*// your styles for the image*/
+  /*  width: 100%;
+    height: auto;
+    display: block;
+}
+*/
+#youroutfit{
+  margin-top: 40px;
+  color:white;
+  border-radius: 5px;
+  background-color:#331033;
+  padding-left:100px;
+  padding-top:10px;
+  padding-bottom: 10px;
+  font-family: 'Impact';
+  font-size: 55px;
+  margin-bottom: 40px;
+  margin-right:1090px;
+  letter-spacing: 10px;
+}
+
+#man3{
+margin-top: 440px;
+margin-left:20px;
+}
+#flower{
+  margin-top: -190px;
+margin-left:-70px;
+
+}
+
+#girl{
+  margin-top:400px;
+  margin-right: -20px:;
+}
+
