@@ -1,25 +1,19 @@
-<div class="container">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">MyDailyCloset</a>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><img id="logo" src="/assets/logonav.jpg"></a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html">home</a></li>
+        <li><a href="fullcloset.html">full closet</a></li>
+        <li><a href="createnewoutfit.html">create outfit</a></li>
+        <li class="active"><a href="saveoutfit.html">my outfits</a></li>
+      </ul>
     </div>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-      <li><a href="#">Page 4</a></li>
-    </ul>
-  </div>
-</nav>
-</div>
+  </nav>
 
-<div class="row">
- <div class="col-md-12"> 
-  <h4 id="mycloset">MY OUTFITS</h4>
- </div>
-</div>
+
+<h4 id="saveoutfit">MY OUTFITS</h4>
 
   {{#each outfits}}
     <div style="float:left">
@@ -41,6 +35,10 @@
 
     </div>
   {{/each}}
+
+  <br>
+  <hr>
+  <br>
 
     <script src="/assets/js/outfitsjs.js"></script>
  
