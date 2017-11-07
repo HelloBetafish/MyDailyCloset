@@ -67,11 +67,13 @@ router.post("/api/outfits/:userID", function(req, res) {
   });
 });
 
-router.put("/api/closet/:clothesID", function(req, res) {
+router.put("/closet/:userID/:clothesID", function(req, res) {
   var condition = "clothesID = " + req.params.clothesID;
   console.log("condition", condition);
 
-  closet.favClothes(id, function(result) {
+  closet.favClothes({
+    favorite: req.body.favorite
+  }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -97,8 +99,8 @@ router.put("/outfits/:userID/:outfitsID", function(req, res) {
   });
 });
 
-router.delete("/api/closet/:userID", function(req, res) {
-  var condition = "id = " + req.body.clothesID;
+router.delete("/closet/:userID/:clothesID", function(req, res) {
+  var condition = "clothesID = " + req.params.clothesID;
 
   closet.deleteClothes(condition, function(result) {
     if (result.affectedRows == 0) {
