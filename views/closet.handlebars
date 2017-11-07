@@ -24,10 +24,31 @@
 <div id="fullcontainer" class="container">
 
 
- <div class="row">
+<div class="row">
  <h5 id="clothing">TOPS</h5>
    <div class="col-md-12"> 
-    <img id="blouse" src="blouses1c.jpg" width="150" height="150">
+
+   {{#each clothes}}
+    <div style="float:left">
+      <div>
+        <img src="{{imagepath}}" alt="outfit" height="400" width="400">
+      </div>
+
+        <button type="button" class="btn btn-default change-fav" data-id="{{this.clothesID}}" aria-label="Favorite"
+        name="favorite"
+
+        {{#if favorite}} value="1"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+
+        {{else}} value="0"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>{{/if}}
+        </button>
+
+        <button type="button" class="btn btn-default delete" data-id="{{this.clothesID}}" aria-label="Delete">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+
+    </div>
+  {{/each}}
+
    </div>
 </div>
 
@@ -40,7 +61,6 @@
 <div class="row">
  <h5 id="clothing" >BOTTOMS</h5>
    <div class="col-md-12"> 
-    <img id="bottomimg" src="bottonmale1.jpg" width="100" height="140">
    </div>
 </div>
 
@@ -53,7 +73,6 @@
 <div class="row">
 <h5 id="clothing">SHOES</h5>
    <div class="col-md-12"> 
-    <img id="shoesimg" src="shoesmenwoman.jpg" width="130" height="90">
    </div>
 </div>
 
@@ -66,7 +85,6 @@
 <div class="row">
 <h5 id="clothing">ACCESSORIES</h5>
    <div class="col-md-12"> 
-     <img id="accessoriesimg" src="accesories3.jpg" width="150" height="150">
    </div>
 </div>
 
@@ -77,5 +95,3 @@
   </div>
 
 </div>
-
-<script src="/assets/js/closetjs.js"></script>
