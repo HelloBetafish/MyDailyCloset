@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Your Closet page 4</title>
+  <title>Full Closet page 4</title>
 
 
  <meta charset="utf-8">
@@ -30,12 +30,11 @@
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-
-      <!-- bootstrap js library -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
      
      <!-- jQuery latest library -->
    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+   <script src="https://static.filestackapi.com/v3/filestack.js"></script>
 
 </head>
 <body>
@@ -43,14 +42,12 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img id="logo" src="assets/mydailyclosetgray.jpg"></a>
+      <a class="navbar-brand" href="#"><img id="logo" src="assets/logonav.jpg"></a>
     </div>
     <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">today's outfit</a></li>
-      <li><a href="#">new outfit</a></li>
-      <li><a href="#">Page 3</a></li>
-      <li><a href="#">Page 4</a></li>
+      <li class="active"><a href="home.html">Home</a></li>
+      <li><a href="createnewoutfit.html">create outfit</a></li>
+      <li><a href="saveoutfit.html">save outfits</a></li>
     </ul>
   </div>
 </nav>
@@ -60,7 +57,7 @@
 
 <div class="row">
  <div class="col-md-12"> 
-  <h4 id="mycloset">MY CLOSET</h4>
+  <h4 id="mycloset">FULL CLOSET</h4>
  </div>
 </div>
 
@@ -69,57 +66,66 @@
 <div id="fullcontainer" class="container">
   <!-- <div class="row"> -->
     <div class="col-md-12">
-     <!-- 
-        <div id="topbox" class="row">  -->
-             <h5 id="topstitle">TOPS</h5>
-              <div id="topbox" class="row"> 
-                   <img id="topmale" src="assets/topmale.jpg" width="80" height="80">
-                    <img id="blouse3" src="assets/blousehanger3.jpg" width="80" height="80">
-                 <div id="tops"></div>
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-                   <img src="assets/accesories3.jpg" width="100" height="100">
-              </div>
+      
+          <div class="row"> 
+             <!-- <h5 id="topstitle">TOPS</h5> -->
+                  <img id="topmale" src="assets/topmale.jpg" width="80" height="80">
+                  <img id="blouse3" src="assets/blousehanger3.jpg" width="80" height="80">
+                  <button id="btnaddtops" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" onclick="return addimage_onclick(1)" ></span>Upload</button>
+          </div>
+                  <div id="topbox" class="row"> 
+                  <div id="tops"></div>
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="assets/accesories3.jpg" width="100" height="100">
 
-              
-              <h5 id="bottomtitle">BOTTOMS</h5>
-                <div id="topbox" class="row"> 
+                  </div>
+
+              <div class="row">   
+             <!--  <h5 id="bottomtitle">BOTTOMS</h5> -->
                      <img id="jeans3" src="assets/botton3.jpg" width="40" height="70">
                      <img id="skirt1" src="assets/skirt.jpg" width="60" height="60">
+                     <button id="btnaddbottoms" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" onclick="return addimage_onclick(1)" ></span>Upload</button>
+              </div>
+                <div id="bottombox" class="row"> 
                    <div id="bottoms"></div>
                      <img src="assets/accesories3.jpg" width="100" height="100">
                      <img src="assets/accesories3.jpg" width="100" height="100">
                 </div>
+  
 
-                
-              <h5 id="bottomtitle">SHOES</h5>
-                <div id="topbox" class="row"> 
+              <div class="row"> 
+             <!--  <h5 id="bottomtitle">SHOES</h5>  -->
                      <img id="shoesman" src="assets/shoesmen2.jpg" width="70" height="70">
                      <img id="shoeswoman1" src="assets/shoeswoman2.jpg" width="65" height="65">
+                     <button id="btnaddshoes" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" onclick="return addimage_onclick(1)" ></span>Upload</button>
+              </div>
+
+                <div id="shoesbox" class="row"> 
                    <div id="shoes"></div>
                      <img src="assets/accesories3.jpg" width="100" height="100">
                      <img src="assets/accesories3.jpg" width="100" height="100">
-                </div>
+                 </div>
+             </div>
 
-              <h5 id="bottomtitle">ACCESSORIES</h5>
-                <div id="topbox" class="row"> 
+               <div class="row"> 
+             <!--  <h5 id="bottomtitle">ACCESSORIES</h5> -->
                      <img id="accessman" src="assets/clothingmen.jpg" width="60" height="70">
                      <img id="accesswoman" src="assets/accesories3.jpg" width="80" height="80">
+                     <button id="btnaddaccessories" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" onclick="return addimage_onclick(1)" ></span>upload</button>
+              </div>
+                  
+                <div id="accessoriesbox" class="row">    
                    <div id="accessories"></div>
                      <img src="assets/accesories3.jpg" width="100" height="100">
                      <img src="assets/accesories3.jpg" width="100" height="100">
@@ -212,7 +218,49 @@
 
 </div>
  
+<script type="text/javascript">  
 
+// function after click add singer's button 
+  $("#btnaddphotos").on("click", function(event){
+          event.preventDefault();
+
+          var singer = $("#singers-input").val().trim();
+          console.log('singer:', singer);
+
+          singers.push(singer);
+          renderButtons();
+    });
+
+        // $(document).on("click", ".singer", displaySingerInfo);
+
+        //      renderButtons();
+
+ 
+function addimage_onclick(num) {
+    event.preventDefault();
+
+
+    const link = document.getElementById('url');
+
+    const client = filestack.init('AuPt8CYJQGS1kGO8wkHGdz');
+
+    client.pick({
+        accept: 'image/*',
+    }).then(function(result) {
+        const fileUrl = result.filesUploaded[0].url;
+        $("#image-" + num).replaceWith("<img src=" + fileUrl + " height=200 width=200 class=img-fluid>");
+        link.href = fileUrl;
+        link.innerHTML = fileUrl;
+    });
+
+
+}
+
+
+
+
+
+ </script>
 
 
 
