@@ -3,8 +3,6 @@
 <head>
   <title>CreateNewOutfit</title>
 
-
-
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -12,7 +10,9 @@
  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Vollkorn" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
- <link rel="stylesheet" type="text/css" href="assets/css/closet_style.css">
+
+ <!-- 
+ <link rel="stylesheet" type="text/css" href="assets/css/closet_style.css"> -->
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -20,7 +20,7 @@
 
 
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">  
-     <link rel="stylesheet" type="text/css" href="assets/css/closet_style.css">
+   <link rel="stylesheet"  href="assets/css/closet_style.css">
 
     
 </head>
@@ -33,14 +33,12 @@
  <nav class="navbar navbar-default">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#"><img id="logo" src="assets/mydailyclosetgray.jpg"></a>
+      <a class="navbar-brand" href="#"><img id="logo" src="assets/logonav.jpg"></a>
     </div>
     <ul class="nav navbar-nav navbar-right" >
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">today's outfit</a></li>
-      <li><a href="#">new outfit</a></li>
-      <li><a href="#">full closet</a></li>
-      <li><a href="#">your outfits</a></li>
+      <li class="active"><a href="home.html">Home</a></li>
+      <li><a href="fullcloset.html">full closet</a></li>
+      <li><a href="saveoutfit.html">save outfits</a></li>
     </ul>
   </div>
 </nav>
@@ -57,7 +55,7 @@
      </div>
      <div class="col-md-6 ">
        <div class="jumbotron " >
-        <!--  <center><h3>top</h3></center> -->
+      <!--    <center><h3>top</h3></center> -->
 
       <!-- first carousel -->
              
@@ -89,7 +87,7 @@
           </a>
       </div>
 
-
+ <!-- <center><h3>bottom</h3></center> -->
 
       <!-- second carousel -->
              
@@ -122,7 +120,7 @@
       </div>
 
 
-
+<!-- <center><h3>shoes</h3></center> -->
         <!-- third carousel -->
                
         <div id="myCarousel-3" class="carousel slide" data-ride="carousel">
@@ -192,31 +190,21 @@
 <script type="text/javascript">   
 
 
-$(function() {
-    $('#myCarousel').each(function(){
-        $(this).carousel({
-            interval: false
-        });
-    });
-});​ 
+$('#myCarousel').carousel({
+    pause: true,
+    interval: false
+});
 
+$('#myCarousel-2').carousel({
+    pause: true,
+    interval: false
+});
 
- 
- $(function() {
-    $('#myCarousel-2').each(function(){
-        $(this).carousel({
-            interval: false
-        });
-    });
-});​ 
+$('#myCarousel-3').carousel({
+    pause: true,
+    interval: false
+});
 
- $(function() {
-    $('#myCarousel-3').each(function(){
-        $(this).carousel({
-            interval: false
-        });
-    });
-});​ 
 
 
 

@@ -17,23 +17,30 @@
 
 <div class="row">
  <div class="col-md-12"> 
-  <h4 id="mycloset">MY CLOSET</h4>
+  <h4 id="mycloset">MY OUTFITS</h4>
  </div>
 </div>
 
-<h2>My Saved Outfits!</h2>
-
-<ul>
   {{#each outfits}}
-      <li>
-        <img src="{{outfitspath}}" alt="outfit">
-        <button type="button" class="btn btn-default" aria-label="Left Align">
-        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button>        
-        <button type="button" class="btn btn-default" aria-label="Left Align">
-        <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>
+    <div style="float:left">
+      <div>
+        <img src="{{outfitspath}}" alt="outfit" height="400" width="400">
+      </div>
+
+        <button type="button" class="btn btn-default change-fav" data-id="{{this.outfitsID}}" aria-label="Favorite"
+        name="favorite"
+
+        {{#if favorite}} value="1"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+
+        {{else}} value="0"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>{{/if}}
         </button>
-      </li>
+
+        <button type="button" class="btn btn-default delete" data-id="{{this.outfitsID}}" aria-label="Delete">
+        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+
+    </div>
   {{/each}}
-</ul>
+
+ 
 
