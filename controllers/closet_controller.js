@@ -8,11 +8,9 @@ var closet = require("../models/closet.js");
 
 // Create all our routes and set up logic within those routes where required.
 
-// Need to show all 
-
 // Index Home Page which is also the login page
 router.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/index.html"));
+    res.sendFile(path.join(__dirname, "../public/login.html"));
    // refers to .handlebars file that will be inserted into main.handlebars.
   });
 
