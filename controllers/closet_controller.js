@@ -1,5 +1,5 @@
 var express = require("express");
-
+var path = require("path");
 var router = express.Router();
 
 // Import the model (closet.js) to use its database functions.
@@ -8,33 +8,18 @@ var closet = require("../models/closet.js");
 
 // Create all our routes and set up logic within those routes where required.
 
-// Need to show all 
-
-router.get("/login", function(req, res) {
-    res.render("login");
+// Index Home Page which is also the login page
+router.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/login.html"));
    // refers to .handlebars file that will be inserted into main.handlebars.
   });
 
-
-router.get("/:userID", function(req, res) {
-    res.render("index");
-   // refers to .handlebars file that will be inserted into main.handlebars.   // closet refers to closet.handlebars file that will cycle through mySQL and display images
-  });
-
+// Carousel Paage
 router.get("/createOutfit/:userID", function(req, res) {
-    var condition = "userID = " + req.params.userID + " && clothestype = shirts";
-    closet.displayType(condition, function(data) {
-    var hbsObject = {
-    shirts: data
-  // clothes refers to var name in closet.handlebars
-    };
-    console.log(hbsObject);
-    res.render("create", hbsObject);
-
-   // refers to .handlebars file that will be inserted into main.handlebars.   // closet refers to closet.handlebars file that will cycle through mySQL and display images
+    res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
   });
-});
 
+//fullcloset.html
 router.get("/closet/:userID", function(req, res) {
     var condition = "userID = " + req.params.userID;
     closet.displayType(condition, function(data) {
@@ -82,11 +67,13 @@ router.post("/api/outfits/:userID", function(req, res) {
   });
 });
 
-router.put("/api/closet/:clothesID", function(req, res) {
+router.put("/closet/:userID/:clothesID", function(req, res) {
   var condition = "clothesID = " + req.params.clothesID;
   console.log("condition", condition);
 
-  closet.favClothes(id, function(result) {
+  closet.favClothes({
+    favorite: req.body.favorite
+  }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -112,8 +99,8 @@ router.put("/outfits/:userID/:outfitsID", function(req, res) {
   });
 });
 
-router.delete("/api/closet/:userID", function(req, res) {
-  var condition = "id = " + req.body.clothesID;
+router.delete("/closet/:userID/:clothesID", function(req, res) {
+  var condition = "clothesID = " + req.params.clothesID;
 
   closet.deleteClothes(condition, function(result) {
     if (result.affectedRows == 0) {
