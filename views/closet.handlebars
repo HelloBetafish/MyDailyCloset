@@ -68,8 +68,11 @@
 
 <div class="row">   
   <img id="jeans3" src="/assets/botton3.jpg" width="40" height="70">
+
   <img id="skirt1" src="/assets/skirt.jpg" width="60" height="60">
+  
   <button id="btnaddbottoms" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning"  ></span>Upload</button>
+
 </div>
 
 <div id="bottombox" class="row">
@@ -147,7 +150,9 @@
 <div class="row"> 
   <img id="accessman" src="/assets/clothingmen.jpg" width="60" height="70">
   <img id="accesswoman" src="/assets/accesories3.jpg" width="80" height="80">
+
   <button id="btnaddaccessories" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>upload</button>
+
 </div>
 
 <div id="accessoriesbox" class="row">
@@ -196,6 +201,7 @@ function addimage_onclick(num) {
 
     client.pick({
         accept: 'image/*',
+        storeTo: { path: '/assets/' }
     }).then(function(result) {
         const fileUrl = result.filesUploaded[0].url;
         $("#image-" + num).replaceWith("<img src=" + fileUrl + " height=200 width=200 class=img-fluid>");

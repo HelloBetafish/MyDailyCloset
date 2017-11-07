@@ -72,4 +72,21 @@ $(function() {
       }
     );
   });
+
+$("#btnaddtops").on("click", function(event) {
+    event.preventDefault();
+
+    const link = document.getElementById('url');
+
+    const client = filestack.init('AuPt8CYJQGS1kGO8wkHGdz');
+
+    client.pick({
+        accept: 'image/*',
+        storeTo: { path: '/assets/' }
+    }).then(function(result) {
+        const fileUrl = result.filesUploaded[0].url;
+        console.log(fileUrl);
+    });
+});
+
 });
