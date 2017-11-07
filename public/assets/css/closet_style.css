@@ -76,8 +76,10 @@ body{
 	margin-left: 150px;
 }
 .carousel-inner{
-	background-color:black;
-
+	background-color:#595b5c;
+ /*background-image: -webkit-linear-gradient( #595b5c 0%, #eaecec 100%,  #595b5c 0% );
+   background-image: -o-linear-gradient( #595b5c 0%, #eaecec 100%, #595b5c 0%);*/
+  
 }
 
 
@@ -731,7 +733,7 @@ body {
   font-family: 'Comfortaa';
   font-weight: bold;
   font-size: 16px;
-  margin-left: 110px;
+  /*margin-left: 110px;*/
 
 }
 .title2{
@@ -739,7 +741,7 @@ body {
   font-family: 'Comfortaa';
   font-weight: bold;
   font-size: 16px;
-  margin-left: 110px;
+ /* margin-left: 110px;*/
 
 }
 .title3{
@@ -747,7 +749,7 @@ body {
   font-family: 'Comfortaa';
   font-weight: bold;
   font-size: 16px;
-  margin-left: 110px;
+ /* margin-left: 110px;*/
 
 }
 
@@ -1046,8 +1048,10 @@ margin-left:-70px;
 }
 
 #man3{
-  height: 70%;
-  width:50%;
-  margin-left:70px;
+  height: 90%;
+  width:70%;
+  margin-left:30px;
+  margin-bottom:70px;
+  margin-top:300px;
 }
 

@@ -63,39 +63,44 @@
  </div>
 </div>
 
-<div id="calendarbox" class="container">
+<!-- <div id="calendarbox" class="container"> -->
  <div class="row">
    <div class="col-md-4"> 
-    <h5 class="text">Today Nov 8th</h5>
+
+    <!-- <h5 style="margin-right: 15px;" class="text">Today Nov 8th</h5> -->
 
 
       
       <div id="outfit"></div>
-      <img id="redoutfit" src="assets/Red-Outfit.jpg" width="400" height="400" class='closet-image'>
+       <h5 style="margin-left:265px;" class="text">Today Nov 8th</h5>
+
+      <img style="margin-left:140px;" id="redoutfit" src="assets/Red-Outfit.jpg" width="400" height="400" class='closet-image'>
       </div>
 
   <!-- calendar-->
       <div class="col-md-4">
-      <div id="calendar"></div>
+      <div style="margin-left:90px;" id="calendar"></div>
       </div>
 
   <!-- buttons-->  
-      <div class="col-md-4">
-          <h5 id="title">WHAT WOULD YOU LIKE TO DO NEXT?</h5>
+  <div  class="col-md-4">
+          <h5 style="margin-left:75px;" id="title">WHAT WOULD YOU LIKE TO DO NEXT?</h5>
         <div class="col-md-3">
-            <h5 class="title1">View</h5>
-            <h5 class="title2">Create</h5>
-            <h5 class="title3">View</h5>
+            <h5 style="margin-left:50px;" class="title1">View</h5>
+            <h5 style="margin-left:50px;" class="title2">Create</h5>
+            <h5 style="margin-left:50px;" class="title3">View</h5>
         </div>
 
         <div class="col-md-1">
-            <button id="btn1" type="button" class="btn btn-warning">full closet</button>
-            <button id="btn2" type="button" class="btn btn-warning">New Outfits</button>
-            <button id="btn3" type="button" class="btn btn-warning">save Outfit</button>
+            <button style="margin-left:20px;" id="btn1" type="button" class="btn btn-warning" onclick="return fullcloset_onclick()" >full closet</button>
+
+            <button style="margin-left:20px;" id="btn2" type="button" class="btn btn-warning" onclick="return newoutfit_onclick()" >New Outfits</button>
+
+            <button style="margin-left:20px;" id="btn3" type="button" class="btn btn-warning" onclick="return saveoutfit_onclick()">save Outfit</button>
         </div>
      </div>
    </div>
-</div>
+<!-- </div> -->
  <!--- Illustrations in the bottom -->
 
    <div class="row">
@@ -115,7 +120,21 @@
  
  
    
-  <script type="text/javascript">   
+  <script type="text/javascript">  
+
+
+   function fullcloset_onclick() {
+            window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/fullcloset.html";
+        }
+
+  function newoutfit_onclick() {
+            window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/createnewoutfit.html";
+        }
+
+  function saveoutfit_onclick() {
+            window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/saveoutfit.html";
+        }
+ 
 
 
 

@@ -46,6 +46,7 @@
     </div>
     <ul class="nav navbar-nav navbar-right">
       <li class="active"><a href="home.html">Home</a></li>
+
       <li><a href="createnewoutfit.html">create outfit</a></li>
       <li><a href="saveoutfit.html">save outfits</a></li>
     </ul>
@@ -75,20 +76,11 @@
           </div>
                   <div id="topbox" class="row"> 
                   <div id="tops"></div>
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
+                      <a href="#">
+                      <img class="img-fluid"   class="img-rounded" id="image-1" onclick="return addimage_onclick(1)" height=200 width=200/> 
+                     </a>
 
+                     
                   </div>
 
               <div class="row">   
@@ -131,11 +123,7 @@
                      <img src="assets/accesories3.jpg" width="100" height="100">
                 </div>
 
-           
-
-
-
-    <!-- </div> -->
+  
 </div>
 </div>
 
@@ -144,97 +132,12 @@
 
 
 
-
-<!-- <div id="fullcontainer" class="container">
-  <!- <div class="row"> -->
-    <!-- <div class="col-md-12">
-      <div class="box1">
-         <h5 id="topstitle">TOPS</h5>
-         <img id="blouse" src="assets/blouses1c.jpg" width="100" height="100">
-         <h5 id="bottomtitle">BOTTOMS</h5>
-          <img id="bottomimg" src="assets/bottonmale1.jpg" width="80" height="120">
-          <h5 id="shoestitle">SHOES</h5>
-          <img id="shoesimg" src="assets/shoesmenwoman.jpg" width="120" height="90">
-          <h5 id="accessoriestitle">ACCESORIES</h5>
-          <img id="accessoriesimg" src="assets/accesories3.jpg" width="100" height="100">
-          </div> -->
-   
-    <!-- <div id="topbox" class="col-md-1"> -->
-       <!--  <div class="row"> 
-          <div id="tops"></div>
-          <img src="assets/accesories3.jpg" width="100" height="100">
-           <img src="assets/accesories3.jpg" width="100" height="100">
-        </div> 
-        <hr>
-          <div class="row"> 
-          <div id="bottoms"></div>
-        </div> 
-        <hr>
-         <div class="row"> 
-          <div id="shoes"></div>
-        </div> 
-        <hr>
-          <div class="row"> 
-          <div id="accessories"></div>
-        </div>
-        <hr>   -->
-    <!-- </div> -->
-<!-- </div>
-</div> --> 
-  <!-- </div> -->
-
- 
-  <!-- <div class="row">
-    <div class="col-md-2">
-       <h5 id="bottomtitle">BOTTOMS</h5>
-        <img id="bottomimg" src="assets/bottonmale1.jpg" width="100" height="140">
-    </div>
-    <div id="topbox" class="col-md-10"> 
-        <div id="bottoms"></div> 
-    </div>
-  </div>
-
-
-  <div class="row">
-    <div class="col-md-2">
-       <h5 id="shoestitle">SHOES</h5>
-        <img id="shoesimg" src="assets/shoesmenwoman.jpg" width="130" height="90">
-    </div>
-    <div id="topbox" class="col-md-10"> 
-        <div id="shoes"></div>   
-    </div>
-  </div>
-
- 
- <div class="row">
-    <div class="col-md-2">
-       <h5 id="accessoriestitle">ACCESORIES</h5>
-        <img id="accessoriesimg" src="assets/accesories3.jpg" width="150" height="150">
-    </div>
-    <div id="topbox" class="col-md-10"> 
-        <div id="accessories"></div> 
-    </div>
-  </div> -->
 
 </div>
  
 <script type="text/javascript">  
 
-// function after click add singer's button 
-  $("#btnaddphotos").on("click", function(event){
-          event.preventDefault();
-
-          var singer = $("#singers-input").val().trim();
-          console.log('singer:', singer);
-
-          singers.push(singer);
-          renderButtons();
-    });
-
-        // $(document).on("click", ".singer", displaySingerInfo);
-
-        //      renderButtons();
-
+       
  
 function addimage_onclick(num) {
     event.preventDefault();
