@@ -22,9 +22,21 @@ router.get("/home", function(req, res) {
 
 
 // Carousel Page
+// router.get("/createOutfit/:userID", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
+//   });
+
 router.get("/createOutfit/:userID", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
+    var condition = "userID = " + req.params.userID;
+    closet.displayType(condition, function(data) {
+    var hbsObject = {
+    carousel: data
+  // clothes refers to var name in closet.handlebars
+    };
+    console.log(hbsObject);
+    res.render("createoutfit", hbsObject);
   });
+});
 
 //fullcloset.html
 router.get("/closet/:userID", function(req, res) {
