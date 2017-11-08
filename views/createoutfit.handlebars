@@ -20,7 +20,7 @@
 <div  id="carousel-1" class="container">
    <div class="row">
      <div class="col-md-2 ">
-       <img id="man" src="assets/man7.jpg" width="300" height="400" class='closet-image'>
+       <img id="man" src="/assets/man7.jpg" width="300" height="400" class='closet-image'>
      </div>
      <div class="col-md-6 ">
        <div class="jumbotron ">
@@ -29,24 +29,24 @@
       <!-- first carousel -->
              
       <div id="myCarousel" class="carousel slide" data-ride="carousel">
-          <!-- <!- Carousel indicators --> 
-          <ol class="carousel-indicators">
-              <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel" data-slide-to="1"></li>
-              <li data-target="#myCarousel" data-slide-to="2"></li>
-          </ol>   
+
           <!-- Wrapper for carousel items -->
           <div class="carousel-inner">
-              <div align="center" class="item active">
-                  <img src="assets/blouseflower.jpg" alt="First Slide">
-              </div>
+
+            <div align="center" class="item active">
+              <img src="/assets/blouseflower.jpg" alt="First Slide">
+            </div>
+
+            {{#each carousel}}
+              {{#if isTop}}
               <div align="center" class="item">
-                  <img src="assets/blouse.jpg" alt="Second Slide">
+                  <img src="{{imagepath}}" alt="Slide">
               </div>
-              <div align="center" class="item">
-                  <img src="assets/blouse.jpg" alt="Third Slide">
-              </div>
+              {{/if}}
+            {{/each}}
+
           </div>
+
           <!-- Carousel controls -->
           <a class="carousel-control left" href="#myCarousel" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left"></span>
@@ -60,25 +60,24 @@
 
       <!-- second carousel -->
              
-      <div id="myCarousel-2" class="carousel slide" data-ride="carousel">
-          <!-- <!- Carousel indicators --> 
-          <ol class="carousel-indicators">
-              <li data-target="#myCarousel-2" data-slide-to="0" class="active"></li>
-              <li data-target="#myCarousel-2" data-slide-to="1"></li>
-              <li data-target="#myCarousel-2" data-slide-to="2"></li>
-          </ol>   
+      <div id="myCarousel-2" class="carousel slide" data-ride="carousel"> 
+
           <!-- Wrapper for carousel items -->
+
           <div class="carousel-inner">
               <div align="center" class="item active">
-                  <img src="assets/jeans1.jpg" alt="First Slide">
+                  <img src="/assets/jeans1.jpg" alt="First Slide">
               </div>
+
+            {{#each carousel}}
+              {{#if isBottom}}
               <div align="center" class="item">
-                  <img src="assets/skirt.jpeg" alt="Second Slide">
+                  <img src="{{imagepath}}" alt="Slide">
               </div>
-              <div align="center" class="item">
-                  <img src="assets/whitepans.jpg" alt="Third Slide">
-              </div>
+              {{/if}}
+            {{/each}}
           </div>
+
           <!-- Carousel controls -->
           <a class="carousel-control left" href="#myCarousel-2" data-slide="prev">
               <span class="glyphicon glyphicon-chevron-left"></span>
@@ -93,24 +92,21 @@
         <!-- third carousel -->
                
         <div id="myCarousel-3" class="carousel slide" data-ride="carousel">
-            <!-- <!- Carousel indicators --> 
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel-3" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel-3" data-slide-to="1"></li>
-                <li data-target="#myCarousel-3" data-slide-to="2"></li>
-            </ol>   
+
             <!-- Wrapper for carousel items -->
             <div class="carousel-inner">
                 <div align="center" class="item active">
-                    <img src="assets/shoes2.jpg" alt="First Slide">
+                    <img src="/assets/shoes2.jpg" alt="First Slide">
                 </div>
-                <div align="center" class="item">
-                    <img src="assets/shoes4.jpg" alt="Second Slide">
-                </div>
-                <div align="center" class="item">
-                    <img src="assets/shoes5.jpg" alt="Third Slide">
-                </div>
+            {{#each carousel}}
+              {{#if isShoe}}
+              <div align="center" class="item">
+                  <img src="{{imagepath}}" alt="Slide">
+              </div>
+              {{/if}}
+            {{/each}}
             </div>
+
             <!-- Carousel controls -->
             <a class="carousel-control left" href="#myCarousel-3" data-slide="prev">
                 <span class="glyphicon glyphicon-chevron-left"></span>
@@ -119,33 +115,27 @@
                 <span class="glyphicon glyphicon-chevron-right"></span>
             </a>
         </div>
-
-    
     </div>
-
 </div>
 
-
- 
-    
     <!--accesories -->
      <div class="col-md-3">
-      <img id="woman" src="assets/woman.jpg" width="355" height="375" class='closet-image'>
+      <img id="woman" src="/assets/woman.jpg" width="355" height="375" class='closet-image'>
      <h5>accessories</h5>
       
           <div id= "thumb1" class="thumbnail">
-            <img src="assets/necklace.jpg" alt="">
+            <img src="/assets/necklace.jpg" alt="">
           </div>
           <div id="thumb2" class="thumbnail">
-            <img src="assets/watch.jpg" alt="">
+            <img src="/assets/watch.jpg" alt="">
           </div>
            <div id= "thumb3" class="thumbnail">
-            <img src="assets/bracelet.jpg" alt="">
+            <img src="/assets/bracelet.jpg" alt="">
           </div>
           <div id= "thumb4" class="thumbnail">
-            <img src="assets/ring.jpg" alt="">
+            <img src="/assets/ring.jpg" alt="">
           </div>
-          <button type="button" class="btn btn-warning">SAVE OUTFIT</button>
+          <button id="saveOutfit" type="button" class="btn btn-warning">SAVE OUTFIT</button>
    
       <!---accesories ends here-->    
      </div>
@@ -155,28 +145,4 @@
 </div>
 
 
-
-<script type="text/javascript">   
-
-
-$('#myCarousel').carousel({
-    pause: true,
-    interval: false
-});
-
-$('#myCarousel-2').carousel({
-    pause: true,
-    interval: false
-});
-
-$('#myCarousel-3').carousel({
-    pause: true,
-    interval: false
-});
-
-
-
-
-
-
- </script>
+<script src="/assets/js/createOutfitjs.js"></script>

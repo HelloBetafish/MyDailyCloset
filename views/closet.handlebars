@@ -21,8 +21,20 @@
 <div id="fullcontainer" class="container">
 
 <div class="row">
- <h5 id="clothing">TOPS</h5>
-   <div class="col-md-12"> 
+  <img id="topmale" src="/assets/topmale.jpg" width="80" height="80">
+
+  <img id="blouse3" src="/assets/blousehanger3.jpg" width="80" height="80">
+
+  <button id="btnaddtops" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning"></span>Upload</button>
+</div>
+
+<div id="topbox" class="row">
+   <div id="tops" class="col-md-12"> 
+   </div>
+      <a href="#">
+        <img class="img-fluid"   class="img-rounded" id="image-1" onclick="return addimage_onclick(1)" height=200 width=200/> 
+      </a>
+    </div>
 
    {{#each clothes}}
     {{#if isTop}}
@@ -54,9 +66,17 @@
 <hr>
 <br>
 
-<div class="row">
- <h5 id="clothing" >BOTTOMS</h5>
-   <div class="col-md-12"> 
+<div class="row">   
+  <img id="jeans3" src="/assets/botton3.jpg" width="40" height="70">
+
+  <img id="skirt1" src="/assets/skirt.jpg" width="60" height="60">
+  
+  <button id="btnaddbottoms" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning"  ></span>Upload</button>
+
+</div>
+
+<div id="bottombox" class="row">
+   <div id="bottoms" class="col-md-12"> 
 
    {{#each clothes}}
     {{#if isBottom}}
@@ -88,9 +108,14 @@
 <hr>
 <br>
 
-<div class="row">
-<h5 id="clothing">SHOES</h5>
-   <div class="col-md-12"> 
+<div class="row"> 
+  <img id="shoesman" src="/assets/shoesmen2.jpg" width="70" height="70">
+  <img id="shoeswoman1" src="/assets/shoeswoman2.jpg" width="65" height="65">
+  <button id="btnaddshoes" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>Upload</button>
+</div>
+
+<div id="shoesbox" class="row">
+   <div id="shoes" class="col-md-12"> 
 
       {{#each clothes}}
     {{#if isShoe}}
@@ -122,9 +147,16 @@
 <hr>
 <br>
 
-<div class="row">
-<h5 id="clothing">ACCESSORIES</h5>
-   <div class="col-md-12"> 
+<div class="row"> 
+  <img id="accessman" src="/assets/clothingmen.jpg" width="60" height="70">
+  <img id="accesswoman" src="/assets/accesories3.jpg" width="80" height="80">
+
+  <button id="btnaddaccessories" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>upload</button>
+
+</div>
+
+<div id="accessoriesbox" class="row">
+   <div id="accessories" class="col-md-12"> 
 
       {{#each clothes}}
     {{#if isAcc}}
@@ -156,5 +188,25 @@
 <hr>
 <br>
 
-
 <script src="/assets/js/closetjs.js"></script>
+
+<script type="text/javascript">  
+
+function addimage_onclick(num) {
+    event.preventDefault();
+
+    const link = document.getElementById('url');
+
+    const client = filestack.init('AXodQkfA4Soq1kmjeI2Vbzz');
+
+    client.pick({
+        accept: 'image/*',
+        storeTo: { path: '/assets/' }
+    }).then(function(result) {
+        const fileUrl = result.filesUploaded[0].url;
+        $("#image-" + num).replaceWith("<img src=" + fileUrl + " height=200 width=200 class=img-fluid>");
+        link.href = fileUrl;
+        link.innerHTML = fileUrl;
+    });
+}
+ </script>

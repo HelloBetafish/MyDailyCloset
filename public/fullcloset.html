@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-     <link rel="stylesheet" type="text/css" href="assets/css/closet_style.css">
+     <link rel="stylesheet" type="text/css" href="/assets/css/closet_style.css">
 
      <!-- jQuery latest library -->
     
@@ -58,7 +58,7 @@
 
 <div class="row">
  <div class="col-md-12"> 
-  <h4 id="mycloset">FULL CLOSET</h4>
+  <h4 id="mycloset">MY CLOSET</h4>
  </div>
 </div>
 
@@ -70,8 +70,9 @@
       
           <div class="row"> 
              <!-- <h5 id="topstitle">TOPS</h5> -->
-                  <img id="topmale" src="assets/topmale.jpg" width="80" height="80">
-                  <img id="blouse3" src="assets/blousehanger3.jpg" width="80" height="80">
+                  <img id="topmale" src="/assets/topmale.jpg" width="80" height="80">
+                  <img id="blouse3" src="/assets/blousehanger3.jpg" width="80" height="80">
+
                   <button id="btnaddtops" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" onclick="return addimage_onclick(1)" ></span>Upload</button>
           </div>
                   <div id="topbox" class="row"> 
@@ -85,42 +86,42 @@
 
               <div class="row">   
              <!--  <h5 id="bottomtitle">BOTTOMS</h5> -->
-                     <img id="jeans3" src="assets/botton3.jpg" width="40" height="70">
-                     <img id="skirt1" src="assets/skirt.jpg" width="60" height="60">
+                     <img id="jeans3" src="/assets/botton3.jpg" width="40" height="70">
+                     <img id="skirt1" src="/assets/skirt.jpg" width="60" height="60">
                      <button id="btnaddbottoms" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning"  ></span>Upload</button>
               </div>
                 <div id="bottombox" class="row"> 
                    <div id="bottoms"></div>
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="/assets/accesories3.jpg" width="100" height="100">
+                     <img src="/assets/accesories3.jpg" width="100" height="100">
                 </div>
   
 
               <div class="row"> 
              <!--  <h5 id="bottomtitle">SHOES</h5>  -->
-                     <img id="shoesman" src="assets/shoesmen2.jpg" width="70" height="70">
-                     <img id="shoeswoman1" src="assets/shoeswoman2.jpg" width="65" height="65">
+                     <img id="shoesman" src="/assets/shoesmen2.jpg" width="70" height="70">
+                     <img id="shoeswoman1" src="/assets/shoeswoman2.jpg" width="65" height="65">
                      <button id="btnaddshoes" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>Upload</button>
               </div>
 
                 <div id="shoesbox" class="row"> 
                    <div id="shoes"></div>
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="/assets/accesories3.jpg" width="100" height="100">
+                     <img src="/assets/accesories3.jpg" width="100" height="100">
                  </div>
              </div>
 
                <div class="row"> 
              <!--  <h5 id="bottomtitle">ACCESSORIES</h5> -->
-                     <img id="accessman" src="assets/clothingmen.jpg" width="60" height="70">
-                     <img id="accesswoman" src="assets/accesories3.jpg" width="80" height="80">
+                     <img id="accessman" src="/assets/clothingmen.jpg" width="60" height="70">
+                     <img id="accesswoman" src="/assets/accesories3.jpg" width="80" height="80">
                      <button id="btnaddaccessories" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>upload</button>
               </div>
                   
                 <div id="accessoriesbox" class="row">    
                    <div id="accessories"></div>
-                     <img src="assets/accesories3.jpg" width="100" height="100">
-                     <img src="assets/accesories3.jpg" width="100" height="100">
+                     <img src="/assets/accesories3.jpg" width="100" height="100">
+                     <img src="/assets/accesories3.jpg" width="100" height="100">
                 </div>
 
   
@@ -142,13 +143,13 @@
 function addimage_onclick(num) {
     event.preventDefault();
 
-
     const link = document.getElementById('url');
 
-    const client = filestack.init('AuPt8CYJQGS1kGO8wkHGdz');
+    const client = filestack.init('AXodQkfA4Soq1kmjeI2Vbz');
 
     client.pick({
         accept: 'image/*',
+        storeTo: { path: '/assets/' }
     }).then(function(result) {
         const fileUrl = result.filesUploaded[0].url;
         $("#image-" + num).replaceWith("<img src=" + fileUrl + " height=200 width=200 class=img-fluid>");
