@@ -8,35 +8,16 @@ var closet = require("../models/closet.js");
 
 // Create all our routes and set up logic within those routes where required.
 
-// Login page
+// Index Home Page which is also the login page
 router.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/login.html"));
    // refers to .handlebars file that will be inserted into main.handlebars.
   });
 
-// Index Home Page
-router.get("/home", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/home.html"));
-   // refers to .handlebars file that will be inserted into main.handlebars.
-  });
-
-
-// Carousel Page
-// router.get("/createOutfit/:userID", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
-//   });
-
+// Carousel Paage
 router.get("/createOutfit/:userID", function(req, res) {
-    var condition = "userID = " + req.params.userID;
-    closet.displayType(condition, function(data) {
-    var hbsObject = {
-    carousel: data
-  // clothes refers to var name in closet.handlebars
-    };
-    console.log(hbsObject);
-    res.render("createoutfit", hbsObject);
+    res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
   });
-});
 
 //fullcloset.html
 router.get("/closet/:userID", function(req, res) {
@@ -65,11 +46,10 @@ router.get("/outfits/:userID", function(req, res) {
 });
 
 router.post("/api/closet/:userID", function(req, res) {
-  var clothestype;
   closet.uploadClothes([
-    "imagepath", clothestype, "userID"
+    "imagepath", "clothestype", "userID"
   ], [
-    req.body.imagepath, 1, req.params.userID
+    (imagepath), req.body.clothestype, req.params.userID
   ], function(result) {
     // Send back the ID of the new burger
     res.json({ id: result.insertId });
@@ -80,7 +60,7 @@ router.post("/api/outfits/:userID", function(req, res) {
   closet.uploadOutfit([
     "outfitspath", "userID"
   ], [
-    (outfitspath), req.params.userID
+    (outfitpath), req.params.userID
   ], function(result) {
     // Send back the ID of the new burger
     res.json({ id: result.insertId });
