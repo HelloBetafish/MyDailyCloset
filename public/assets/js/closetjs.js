@@ -28,35 +28,13 @@ $(function() {
       type: "PUT",
       data: newFavState
     }).then(
-      function() {
-        console.log("changed favorite: ", changeFavState);
+    function() {
+      console.log("changed favorite: ", changeFavState);
         // Reload the page to get the updated list
         location.reload();
       }
-    );
+      );
   });
-
-  // $(".create-form").on("submit", function(event) {
-  //   // Make sure to preventDefault on a submit event.
-  //   event.preventDefault();
-
-  //   var newCat = {
-  //     name: $("#ca").val().trim(),
-  //     sleepy: $("[name=sleepy]:checked").val().trim()
-  //   };
-
-  //   // Send the POST request.
-  //   $.ajax("/api/cats", {
-  //     type: "POST",
-  //     data: newCat
-  //   }).then(
-  //     function() {
-  //       console.log("created new cat");
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
 
   $(".delete").on("click", function(event) {
     var id = $(this).data("id");
@@ -65,28 +43,47 @@ $(function() {
     $.ajax("/closet/:userID/" + id, {
       type: "DELETE",
     }).then(
-      function() {
-        console.log("deleted clothes: ", id);
+    function() {
+      console.log("deleted clothes: ", id);
         // Reload the page to get the updated list
         location.reload();
       }
-    );
+      );
   });
 
-$("#btnaddtops").on("click", function(event) {
+  $("#btnaddtops").on("click", function(event) {
     event.preventDefault();
 
-    const link = document.getElementById('url');
+    var fsClient = filestack.init('AXodQkfA4Soq1kmjeI2Vbz');
 
-    const client = filestack.init('AuPt8CYJQGS1kGO8wkHGdz');
-
-    client.pick({
-        accept: 'image/*',
-        storeTo: { path: '/assets/' }
+    fsClient.pick({
+      fromSources:["local_file_system","url","imagesearch","facebook","instagram","dropbox"],
+      accept:["image/*"]
     }).then(function(result) {
-        const fileUrl = result.filesUploaded[0].url;
-        console.log(fileUrl);
+      const fileUrl = result.filesUploaded[0].url;
+      $("#tops").append("<img src=" + fileUrl + " class=img-fluid>");
+      console.log(fileUrl);
+
+      var patharray = window.location.pathname.split( '/' );
+      var userID = patharray[(patharray.length-1)];
+
+      var newClothes = {
+        imagepath: fileUrl,
+        userID: userID,
+        isTop: 1
+      };
+
+      // Send the POST request.
+      $.ajax("/api/closet/:userID/", {
+        type: "POST",
+        data: newClothes
+      }).then(
+      function() {
+        console.log("added new clothing item");
+        // Reload the page to get the updated list
+        location.reload();
+      });
     });
-});
+  });
 
 });
