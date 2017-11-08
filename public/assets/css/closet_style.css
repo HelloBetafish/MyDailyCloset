@@ -172,7 +172,9 @@ h3{
   font-weight: bold;
 	}
 
-
+#accPick{
+  float: right;
+}
 /*--------------HOME-----------------------*/
 
 
@@ -749,25 +751,6 @@ body {
   
 }
 
-.imgDiv {
-  margin: 15px;
-  float: left;
-}
-
-.change-fav {
-  float: left;
-  margin: 5px;
-}
-
-.delete {
-  float: right;
-  margin: 5px;
-}
-
-.closetImg.resize {
-  width:50%;
-  height: auto;
-}
 
 /*------------------FULL CLOSET PAGE-------------------*/
 
@@ -977,6 +960,25 @@ p{
 
 }
 
+.closetImg.resize {
+  width:50%;
+  height: auto;
+}
+
+.imgDiv {
+  margin: 15px;
+  float: left;
+}
+
+.change-fav {
+  float: left;
+  margin: 5px;
+}
+
+.delete {
+  float: right;
+  margin: 5px;
+}
 /*------------------FULL OUTFIT-----------------------*/
 
 
