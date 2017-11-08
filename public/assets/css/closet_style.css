@@ -77,8 +77,7 @@ body{
 }
 .carousel-inner{
 	background-color:#595b5c;
- /*background-image: -webkit-linear-gradient( #595b5c 0%, #eaecec 100%,  #595b5c 0% );
-   background-image: -o-linear-gradient( #595b5c 0%, #eaecec 100%, #595b5c 0%);*/
+ 
   
 }
 
@@ -88,7 +87,7 @@ body{
   overflow: hidden;
 }
 
- #newoutfitname{
+ .newoutfitname{
  	margin-top: 40px;
 	color:white;
 	border-radius: 5px;
@@ -99,7 +98,7 @@ body{
     font-family: 'Impact';
 	font-size: 55px;
 	margin-bottom: 90px;
-	margin-right:790px;
+	margin-right:750px;
 	letter-spacing: 7px;
 
 }
@@ -123,7 +122,7 @@ h3{
 }
 
 #woman{
- 	margin-top:-180px;
+ 	margin-top:-170px;
  	margin-left:-80;
 }
 #thumb1{
@@ -154,22 +153,6 @@ h3{
  .container {
  	margin-left:10%;
  }
-
-/* #carousel1{
- 	position:relative;
- 	z-index: 3;
-
- }
-
-#carousel2{
-	position:absolute;
-	left:120px;
-}
-
-#carousel3{
-	position:relative;
-	left:120px;
-}*/
 
 
 
@@ -221,17 +204,6 @@ body {
  user-select: none;
 }
 
-/*.navbar-default{*/
-	/*background-color:#f4c708;*/
-
-/*background-color:#gradient > .vertical(lighten(@navbar-default-bg,10%),darken(@navbar-default-bg,10%));
-*/
-/*@navbar-default-bg: purple;*/
-  /*border-color: gray;
-  border-radius: 0;*/
-	/*height: 60px;
-	margin-bottom:30px;*/
-/*}*/
 
 
 .navbar-default {
@@ -645,7 +617,7 @@ body {
   font-family: 'Impact';
 	font-size: 55px;
 	margin-bottom: 40px;
-	margin-right:820px;
+	margin-right:800px;
 	letter-spacing: 10px;
 }
 
@@ -1026,7 +998,7 @@ margin-left:-70px;
   font-family: 'Impact';
   font-size: 55px;
   margin-bottom: 40px;
-  margin-right:870px;
+  margin-right:930px;
   letter-spacing: 10px;
 }
 
