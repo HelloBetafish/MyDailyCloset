@@ -5,9 +5,9 @@
 
 <div id="savebox" class="container">
   {{#each outfits}}
-  <div style="float:left">
+  <div style="float:left" class="imgDiv">
     <div>
-      <img src="{{outfitspath}}" alt="outfit" height="400" width="400">
+      <img src="{{outfitspath}}" alt="outfit" class="closetImg" height="200" width="200">
     </div>
 
     <button type="button" class="btn btn-default change-fav" data-id="{{this.outfitsID}}" aria-label="Favorite" name="favorite"

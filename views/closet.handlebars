@@ -26,12 +26,12 @@
 
    {{#each clothes}}
     {{#if isTop}}
-    <div style="float:left">
+    <div class="imgDiv">
       <div>
-        <img src="{{imagepath}}" alt="outfit" height="400" width="400">
+        <img src="{{imagepath}}" alt="top" class="closetImg" height="200" width="200">
       </div>
 
-        <button type="button" class="btn btn-default change-fav" data-id="{{this.clothesID}}" aria-label="Favorite"
+        <button type="button" class="btn btn-default change-fav center" data-id="{{this.clothesID}}" aria-label="Favorite"
         name="favorite"
 
         {{#if favorite}} value="1"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
@@ -68,9 +68,9 @@
 
    {{#each clothes}}
     {{#if isBottom}}
-    <div style="float:left">
+    <div style="float:left" class="imgDiv">
       <div>
-        <img src="{{imagepath}}" alt="outfit" height="400" width="400">
+        <img src="{{imagepath}}" alt="bottom" class="closetImg" height="200" width="200">
       </div>
 
         <button type="button" class="btn btn-default change-fav" data-id="{{this.clothesID}}" aria-label="Favorite"
@@ -107,9 +107,9 @@
 
       {{#each clothes}}
     {{#if isShoe}}
-    <div style="float:left">
+    <div style="float:left" class="imgDiv">
       <div>
-        <img src="{{imagepath}}" alt="outfit" height="400" width="400">
+        <img src="{{imagepath}}" alt="shoe" class="closetImg" height="200" width="200">
       </div>
 
         <button type="button" class="btn btn-default change-fav" data-id="{{this.clothesID}}" aria-label="Favorite"
@@ -148,9 +148,9 @@
 
       {{#each clothes}}
     {{#if isAcc}}
-    <div style="float:left">
+    <div style="float:left" class="imgDiv">
       <div>
-        <img src="{{imagepath}}" alt="outfit" height="400" width="400">
+        <img src="{{imagepath}}" alt="accessorie" class="closetImg" height="200" width="200">
       </div>
 
         <button type="button" class="btn btn-default change-fav" data-id="{{this.clothesID}}" aria-label="Favorite"

@@ -61,7 +61,7 @@ $(function() {
       accept:["image/*"]
     }).then(function(result) {
       const fileUrl = result.filesUploaded[0].url;
-      $("#tops").append("<img src=" + fileUrl + " class=img-fluid>");
+      $("#tops").append("<img src=" + fileUrl + " class=img-fluid img-rounded height=200 width=200>");
       console.log(fileUrl);
 
       var patharray = window.location.pathname.split( '/' );
