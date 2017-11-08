@@ -51,4 +51,29 @@ $(function() {
     var userID = patharray[patharray.length - 1];
     window.location.href = "/outfits/" + userID;
   });
+
+// Home page additional side buttons
+  $("#btn1").on("click", function(event) {
+    event.preventDefault();
+
+    var patharray = window.location.pathname.split("/");
+    var userID = patharray[patharray.length - 1];
+    window.location.href = "/closet/" + userID;
+  });
+
+  $("#btn2").on("click", function(event) {
+    event.preventDefault();
+
+    var patharray = window.location.pathname.split("/");
+    var userID = patharray[patharray.length - 1];
+    window.location.href = "/createOutfit/" + userID;
+  });
+
+  $("#btn3").on("click", function(event) {
+    event.preventDefault();
+
+    var patharray = window.location.pathname.split("/");
+    var userID = patharray[patharray.length - 1];
+    window.location.href = "/outfits/" + userID;
+  });
 });

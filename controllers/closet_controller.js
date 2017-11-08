@@ -36,15 +36,18 @@ router.get("/home/:userID", function(req, res) {
    // refers to .handlebars file that will be inserted into main.handlebars.
   });
 
-
 // Carousel Page
-// router.get("/createOutfit/:userID", function(req, res) {
-//     res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
-//   });
-
 router.get("/createOutfit/:userID", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
+    var condition = "userID = " + req.params.userID;
+    closet.displayType(condition, function(data) {
+    var hbsObject = {
+    carousel: data
+  // clothes refers to var name in closet.handlebars
+    };
+    console.log(hbsObject);
+    res.render("createoutfit", hbsObject);
   });
+});
 
 router.get("/closet/:userID", function(req, res) {
     var condition = "userID = " + req.params.userID;
