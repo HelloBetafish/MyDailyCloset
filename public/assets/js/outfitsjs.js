@@ -36,28 +36,6 @@ $(function() {
     );
   });
 
-  // $(".create-form").on("submit", function(event) {
-  //   // Make sure to preventDefault on a submit event.
-  //   event.preventDefault();
-
-  //   var newCat = {
-  //     name: $("#ca").val().trim(),
-  //     sleepy: $("[name=sleepy]:checked").val().trim()
-  //   };
-
-  //   // Send the POST request.
-  //   $.ajax("/api/cats", {
-  //     type: "POST",
-  //     data: newCat
-  //   }).then(
-  //     function() {
-  //       console.log("created new cat");
-  //       // Reload the page to get the updated list
-  //       location.reload();
-  //     }
-  //   );
-  // });
-
   $(".delete").on("click", function(event) {
     var id = $(this).data("id");
 
@@ -71,6 +49,43 @@ $(function() {
         location.reload();
       }
     );
+  });
+
+    $("#btnaddoutfit").on("click", function(event) {
+    event.preventDefault();
+
+    var fsClient = filestack.init('AXodQkfA4Soq1kmjeI2Vbz');
+
+    fsClient.pick({
+      fromSources:["local_file_system","url","imagesearch","facebook","instagram","dropbox"],
+      accept:["image/*"]
+    }).then(function(result) {
+      const fileUrl = result.filesUploaded[0].url;
+      // $("#tops").append("<img src=" + fileUrl + " class=img-fluid img-rounded height=200 width=200>");
+      // console.log(fileUrl);
+      $("#btnaddoutfit").attr("value", fileUrl);
+      var value = $("#btnaddoutfit").val();
+      console.log(value)
+
+      var patharray = window.location.pathname.split( '/' );
+      var userID = patharray[(patharray.length-1)];
+
+      var newOutfit = {
+        outfitspath: fileUrl,
+        userID: userID,
+      };
+
+      // Send the POST request.
+      $.ajax("/outfits/" + userID, {
+        type: "POST",
+        data: newOutfit
+      }).then(
+      function() {
+        console.log("added new clothing item");
+        // Reload the page to get the updated list
+        location.reload();
+      });
+    });
   });
 
 });

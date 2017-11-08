@@ -84,7 +84,7 @@ router.post("/api/closet/:userID", function(req, res) {
     ["imagepath", "clothestype", "userID"],
     [imagepath, req.body.clothestype, req.params.userID],
     function(result) {
-      // Send back the ID of the new burger
+      // Send back the ID of the new item
       res.json({ id: result.insertId });
     }
   );
@@ -93,9 +93,9 @@ router.post("/api/closet/:userID", function(req, res) {
 router.post("/outfits/:userID", function(req, res) {
   closet.uploadOutfit(
     ["outfitspath", "userID"],
-    [outfitpath, req.params.userID],
+    [req.body.outfitpath, req.params.userID],
     function(result) {
-      // Send back the ID of the new burger
+      // Send back the ID of the new outfit
       res.json({ id: result.insertId });
     }
   );
