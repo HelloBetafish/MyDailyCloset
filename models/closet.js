@@ -43,6 +43,11 @@ var closet = {
     orm.delete("saved_outfits", condition, function(res) {
       cb(res);
     });
+  },
+  login: function(cols, vals, cb) {
+    orm.newUser("users", cols, vals, function(res) {
+      cb(res);
+    });
   }
 };
 

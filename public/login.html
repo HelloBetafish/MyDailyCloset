@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>My Daily Closet</title>
 
-	  <!--Jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="assets/css/closet_style.css">
+	
+	<!--Jquery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--Boostrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	<!--Boostrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-     <link rel="stylesheet" type="text/css" href="assets/css/closet_style.css">
+	<script src="/assets/js/outfitsjs.js"></script>
+	<script src="/assets/js/navbar.js"></script>
+
 </head>
+
 <body>
 
 
-<div class="container">
+	<div class="container">
 
-     <img id="pic1" src="assets/womanfash.jpg" width="355" height="375" class='closet-image'>
-     <img  id="pic2" src="assets/mydailycloset2.jpg" class="img-fluid"  width="450" height="450" class="center-block" class="logo-image"> 
-     <img id="pic3" src="assets/menfashion2.png" width="385" height="395" class='men-image'>
-    
+		<img id="pic1" src="assets/womanfash.jpg" width="355" height="375" class='closet-image'>
+		<img id="pic2" src="assets/mydailycloset2.jpg" class="img-fluid" width="450" height="450" class="center-block" class="logo-image">
+		<img id="pic3" src="assets/menfashion2.png" width="385" height="395" class='men-image'>
 
-     <div id="login" class="container">
-		<div class="row omb_row-sm-offset-3">
-			<div class="col-xs-12 col-sm-6">	
-			    <form class="omb_loginForm" action="" autocomplete="off" method="POST">
-					<div id="username" class="input-group">
-						<span class="input-group-addon"><i class="fa fa-user"></i></span>
-						<input  type="text" class="form-control" name="username" placeholder="email address">
+		<form class="login">
+			<div id="login" class="container">
+				<div class="row omb_row-sm-offset-3">
+					<div class="col-xs-12 col-sm-6">
+						<form class="omb_loginForm" action="" autocomplete="off" method="POST">
+							<div id="usernameDiv" class="input-group">
+								<span class="input-group-addon">
+									<i class="fa fa-user"></i>
+								</span>
+								<input type="text" class="form-control" id="username" name="username" placeholder="email address">
+							</div>
+							<span class="help-block"></span>
+
+							<div id="passwordDiv" class="input-group">
+								<span class="input-group-addon">
+									<i class="fa fa-lock"></i>
+								</span>
+								<input type="password" class="form-control" id="password" name="password" placeholder="Password">
+							</div>
+
+							<button class="btn btn-lg btn-warning btn-block btn-responsive" type="submit">Login</button>
+						</form>
 					</div>
-					<span class="help-block"></span>
-										
-					<div id="password" class="input-group">
-						<span class="input-group-addon"><i class="fa fa-lock"></i></span>
-						<input  type="password" class="form-control" name="password" placeholder="Password">
+				</div>
+				<div class="row omb_row-sm-offset-3">
+					<div class="col-xs-12 col-sm-3">
+						<label class="checkbox">
+							<input type="checkbox" value="remember-me">Remember Me
+						</label>
 					</div>
+					<div class="col-xs-12 col-sm-3">
+						<p class="omb_forgotPwd">
+							<a href="#">Forgot password?</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
 
-					<button class="btn btn-lg btn-warning btn-block btn-responsive" type="submit">Login</button>
-				</form>
-			</div>
-    	</div>
-		<div class="row omb_row-sm-offset-3">
-			<div class="col-xs-12 col-sm-3">
-				<label class="checkbox">
-					<input type="checkbox" value="remember-me">Remember Me
-				</label>
-			</div>
-			<div class="col-xs-12 col-sm-3">
-				<p class="omb_forgotPwd">
-					<a href="#">Forgot password?</a>
-				</p>
-			</div>
-		</div>	    	
-	</div>               
- 
-</div>
-  
 </body>
+
 </html>

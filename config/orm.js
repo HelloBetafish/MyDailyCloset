@@ -42,11 +42,11 @@ function objToSql(ob) {
 // Object for all our SQL statement functions.
 var orm = {
   select: function(table, condition, cb) {
-    var queryString = "SELECT * FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
+    var sqlQuery = "SELECT * FROM " + table;
+    sqlQuery += " WHERE ";
+    sqlQuery += condition;
 
-    connection.query(queryString, function(err, result) {
+    connection.query(sqlQuery, function(err, result) {
       if (err) {
         throw err;
       }
@@ -55,18 +55,18 @@ var orm = {
     });
   },
   create: function(table, cols, vals, cb) {
-    var queryString = "INSERT INTO " + table;
+    var sqlQuery = "INSERT INTO " + table;
 
-    queryString += " (";
-    queryString += cols.toString();
-    queryString += ") ";
-    queryString += "VALUES (";
-    queryString += printQuestionMarks(vals.length);
-    queryString += ") ";
+    sqlQuery += " (";
+    sqlQuery += cols.toString();
+    sqlQuery += ") ";
+    sqlQuery += "VALUES (";
+    sqlQuery += printQuestionMarks(vals.length);
+    sqlQuery += ") ";
 
-    console.log(queryString);
+    console.log(sqlQuery);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(sqlQuery, vals, function(err, result) {
       if (err) {
         throw err;
       }
@@ -76,15 +76,15 @@ var orm = {
   },
   // An example of objColVals would be {name: panther, sleepy: true}
   update: function(table, objColVals, condition, cb) {
-    var queryString = "UPDATE " + table;
+    var sqlQuery = "UPDATE " + table;
 
-    queryString += " SET ";
-    queryString += objToSql(objColVals);
-    queryString += " WHERE ";
-    queryString += condition;
+    sqlQuery += " SET ";
+    sqlQuery += objToSql(objColVals);
+    sqlQuery += " WHERE ";
+    sqlQuery += condition;
 
-    console.log(queryString);
-    connection.query(queryString, function(err, result) {
+    console.log(sqlQuery);
+    connection.query(sqlQuery, function(err, result) {
       if (err) {
         throw err;
       }
@@ -93,17 +93,41 @@ var orm = {
     });
   },
   delete: function(table, condition, cb) {
-    var queryString = "DELETE FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
+    var sqlQuery = "DELETE FROM " + table;
+    sqlQuery += " WHERE ";
+    sqlQuery += condition;
 
-    connection.query(queryString, function(err, result) {
+    connection.query(sqlQuery, function(err, result) {
       if (err) {
         throw err;
       }
 
       cb(result);
     });
+  },
+  newUser: function(tableName, cols, vals, cb) {
+    // var sqlQuery = "INSERT INTO " + tableName;
+    // sqlQuery += " (";
+    // sqlQuery += cols.toString();
+    // sqlQuery += ") ";
+    // sqlQuery += " VALUES (";
+    // sqlQuery += printQuestionMarks(vals.length); 
+    // sqlQuery += ") ";
+    var sqlQuery = "SELECT * FROM " + tableName;
+
+    sqlQuery += " WHERE name ='";
+    sqlQuery += vals[0];
+    sqlQuery += "' & password = '";
+    sqlQuery += vals[1];
+    sqlQuery += "'";
+
+    console.log(sqlQuery);
+    console.log(cols);
+
+    connection.query(sqlQuery, function (err, result) {
+      if (err) throw err;
+      cb(result);
+    })
   }
 };
 
