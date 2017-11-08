@@ -14,7 +14,15 @@ router.get("/", function(req, res) {
    // refers to .handlebars file that will be inserted into main.handlebars.
   });
 
-// Carousel Paage
+// Index Home Page
+router.get("/home", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
+   // refers to .handlebars file that will be inserted into main.handlebars.
+  });
+
+
+// Carousel Page
+
 router.get("/createOutfit/:userID", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
   });
@@ -56,7 +64,7 @@ router.post("/api/closet/:userID", function(req, res) {
   });
 });
 
-router.post("/api/outfits/:userID", function(req, res) {
+router.post("/outfits/:userID", function(req, res) {
   closet.uploadOutfit([
     "outfitspath", "userID"
   ], [
