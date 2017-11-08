@@ -23,6 +23,7 @@
   </nav>
 
   <h4 id="newoutfitname">CREATE NEW OUTFIT</h4>
+  <button id="saveOutfit" type="button" class="btn btn-warning">SAVE OUTFIT</button>
     <div class="row">
         <div class="col-md-2">
             <img id="woman" src="/assets/images/woman.jpg" width="355" height="375">
@@ -32,7 +33,7 @@
         <div class="col-md-2 ">
             <img id="man" src="/assets/images/man7.jpg" width="300" height="400">
         </div>
-        <div class="col-md-6 ">
+        <div class="col-md-6">
             <div class="jumbotron ">
                 <!--    <center><h3>top</h3></center> -->
 
@@ -122,24 +123,18 @@
             </div>
         </div>
 
-        <!--accesories -->
+        <!--accessories -->
         <div class="col-md-3">
             <h5>accessories</h5>
-            <div id="thumb1" class="thumbnail">
-                <img src="/assets/images/necklace.jpg" alt="">
-            </div>
-            <div id="thumb2" class="thumbnail">
-                <img src="/assets/images/watch.jpg" alt="">
-            </div>
-            <div id="thumb3" class="thumbnail">
-                <img src="/assets/images/bracelet.jpg" alt="">
-            </div>
-            <div id="thumb4" class="thumbnail">
-                <img src="/assets/images/ring.jpg" alt="">
-            </div>
+            {{#each carousel}}
+                {{#if isAcc}}
+                    <div class="thumbnail">
+                        <img src="{{imagepath}}" alt="accessory">
+                    </div>
+                {{/if}}
+            {{/each}}
 
-            <button id="saveOutfit" type="button" class="btn btn-warning">SAVE OUTFIT</button>
-
+            
             <!---accesories ends here-->
         </div>
     </div>

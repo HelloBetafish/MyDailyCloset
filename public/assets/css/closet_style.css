@@ -124,25 +124,15 @@ h3{
  	margin-top:-170px;
  	margin-left:-80px;
 }*/
-#thumb1{
+
+.thumbnail{
 	margin-top: 20px;
 	margin-left: 100px;
 }
 
-
-#thumb2{
-	margin-top: 20px;
-	margin-left: 100px;
-}
-
-#thumb3{
-	margin-top: 20px;
-	margin-left: 100px;
-}
-
-#thumb4{
-	margin-top: 20px;
-	margin-left: 100px;
+.thumbnail.resize {
+  width:50%;
+  height: auto;
 }
 
 #thumb5{
@@ -151,8 +141,8 @@ h3{
 }
 
 #saveOutfit{
-  margin-top: 20px;
-  margin-left: 100px;
+  float: right;
+  margin-right: 50px;
 }
 
  .container {
