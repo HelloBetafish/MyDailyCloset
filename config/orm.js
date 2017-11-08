@@ -117,12 +117,11 @@ var orm = {
 
     sqlQuery += " WHERE name ='";
     sqlQuery += vals[0];
-    sqlQuery += "' & password = '";
+    sqlQuery += "' and password = '";
     sqlQuery += vals[1];
     sqlQuery += "'";
 
     console.log(sqlQuery);
-    console.log(cols);
 
     connection.query(sqlQuery, function (err, result) {
       if (err) throw err;

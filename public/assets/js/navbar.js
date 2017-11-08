@@ -7,15 +7,17 @@ $(function() {
         .val()
         .trim(), password: $("#password")
         .val()
-        .trim() };
+        .trim() 
+    };
 
     console.log("newUser created");
 
     // Send the POST request.
-    $.ajax("/api/login", { type: "GET", data: newUser }).then(function(result) {
+    $.ajax("/api/login", { type: "POST", data: newUser }).then(function(result) {
       console.log("A new user was created!");
+      console.log(result);
       // Reload the page to get the updated list
-      window.location.href = '/home/' + result.id;
+      window.location.href = '/home/' + result;
     });
   });
 
