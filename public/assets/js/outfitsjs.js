@@ -66,6 +66,7 @@ $(function() {
       $("#btnaddoutfit").attr("value", fileUrl);
       var value = $("#btnaddoutfit").val();
       console.log(value)
+      // value has the path name, but for some reason it is not getting passed to mySQL
 
       var patharray = window.location.pathname.split( '/' );
       var userID = patharray[(patharray.length-1)];
@@ -76,6 +77,7 @@ $(function() {
       };
 
       // Send the POST request.
+      // POST request works, but the path name does not get passed correctly, shows as NULL
       $.ajax("/outfits/" + userID, {
         type: "POST",
         data: newOutfit

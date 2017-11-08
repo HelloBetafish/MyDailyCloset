@@ -51,6 +51,11 @@ $(function() {
       );
   });
 
+/*Added 4 buttons below, and user can upload images to my 
+Filestack account and they will be saved in the cloud.
+However, I have not figured out how to set correct boolean for each clothing type
+and pass image to mySQL dtabase*/
+
   $("#btnaddtops").on("click", function(event) {
     event.preventDefault();
 
