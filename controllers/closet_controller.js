@@ -82,7 +82,7 @@ router.post("/api/closet/:userID", function(req, res) {
   });
 });
 
-router.post("/api/outfits/:userID", function(req, res) {
+router.post("/outfits/:userID", function(req, res) {
   closet.uploadOutfit([
     "outfitspath", "userID"
   ], [

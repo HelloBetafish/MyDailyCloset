@@ -177,24 +177,3 @@
 <br>
 
 <script src="/assets/js/closetjs.js"></script>
-
-<script type="text/javascript">  
-
-function addimage_onclick(num) {
-    event.preventDefault();
-
-    const link = document.getElementById('url');
-
-    const client = filestack.init('AXodQkfA4Soq1kmjeI2Vbzz');
-
-    client.pick({
-        accept: 'image/*',
-        storeTo: { path: '/assets/' }
-    }).then(function(result) {
-        const fileUrl = result.filesUploaded[0].url;
-        $("#image-" + num).replaceWith("<img src=" + fileUrl + " height=200 width=200 class=img-fluid>");
-        link.href = fileUrl;
-        link.innerHTML = fileUrl;
-    });
-}
- </script>
