@@ -108,7 +108,7 @@ body{
 h5{
 	font-family: 'Varela', sans-serif;
 	font-size:30px;
-    color:black;
+  color:black;
 	margin-left:98px;
 
 }
@@ -116,7 +116,7 @@ h5{
 h3{
 	margin-top:-40px;
 	margin-bottom:20px;
-	font-style: 'Impacto'
+	font-style: 'Impacto';
 	font-size:20;
 	color:white;
 
@@ -1041,10 +1041,6 @@ margin-left:-70px;
 #savebox{
   height: 30%;
 
-}
-
-#jumbotronsave{
-  background-color:;
 }
 
 #man3{
