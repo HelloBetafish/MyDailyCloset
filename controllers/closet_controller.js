@@ -10,16 +10,42 @@ var closet = require("../models/closet.js");
 
 // Index Home Page which is also the login page
 router.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    //res.sendFile(path.join(__dirname, "../public/login.html"));
+   // refers to .handlebars file that will be inserted into main.handlebars.
+   res.render('login');
+  });
+
+router.get("/api/login", function(req, res) {
+  console.log("test");
+  console.log(res);
+  closet.login(
+    ["name", "password"],
+    [req.query.username, req.query.password],
+    function(result) {
+      // Send back the ID of the new burger
+      //res.json({ id: result.insertId });
+      console.log("test");
+      console.log(result);
+      res.json({id: result.insertId});
+    }
+  );
+});
+// Index Home Page
+router.get("/home/:userID", function(req, res) {
+    res.render("home");
    // refers to .handlebars file that will be inserted into main.handlebars.
   });
 
-// Carousel Paage
+
+// Carousel Page
+// router.get("/createOutfit/:userID", function(req, res) {
+//     res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
+//   });
+
 router.get("/createOutfit/:userID", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/createnewoutfit.html"));
   });
 
-//fullcloset.html
 router.get("/closet/:userID", function(req, res) {
     var condition = "userID = " + req.params.userID;
     closet.displayType(condition, function(data) {
@@ -56,7 +82,7 @@ router.post("/api/closet/:userID", function(req, res) {
   });
 });
 
-router.post("/api/outfits/:userID", function(req, res) {
+router.post("/outfits/:userID", function(req, res) {
   closet.uploadOutfit([
     "outfitspath", "userID"
   ], [

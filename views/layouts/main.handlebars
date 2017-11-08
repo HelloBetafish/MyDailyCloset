@@ -1,39 +1,69 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>My Daily Closet</title>
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <!--Fonts-->
- <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Vollkorn" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Cinzel|Tangerine" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Quattrocento|Varela" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Vollkorn" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Tangerine" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento|Varela" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-<!--Boostrap-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <!--Boostrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
 
-<!-- CSS -->
-<link rel="stylesheet" type="text/css" href="/assets/css/closet_style.css">
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="/assets/css/closet_style.css">
 
 
-     <!-- jQuery latest library -->
+  <!-- jQuery latest library -->
 
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<!-- bootstrap js library -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+  <!-- bootstrap js library -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
 
   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
   <script src="https://static.filestackapi.com/v3/filestack.js"></script>
 
+  <script src="/assets/js/navbar.js"></script>
+
 </head>
+
 <body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img id="logo" src="/assets/logonav.jpg">
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="homeButton">
+          <a href="">home</a>
+        </li>
+        <li id="fullClosetButton" class="active">
+          <a href="">full closet</a>
+        </li>
+        <li id="createNewOutfitButton">
+          <a href="">create outfit</a>
+        </li>
+        <li id="myOutfitsButton">
+          <a href="">my outfits</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
   {{{ body }}}
 </body>
+
 </html>

@@ -1,47 +1,33 @@
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#"><img id="logo" src="/assets/logonav.jpg"></a>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html">home</a></li>
-        <li><a href="fullcloset.html">full closet</a></li>
-        <li><a href="createnewoutfit.html">create outfit</a></li>
-        <li class="active"><a href="saveoutfit.html">my outfits</a></li>
-      </ul>
-    </div>
-  </nav>
+<h4 id="saveoutfit">
 
 
-<h4 id="saveoutfit">MY OUTFITS</h4>
+  MY OUTFITS</h4>
 
 <div id="savebox" class="container">
   {{#each outfits}}
-    <div style="float:left">
-      <div>
-        <img src="{{outfitspath}}" alt="outfit" height="400" width="400">
-      </div>
-
-        <button type="button" class="btn btn-default change-fav" data-id="{{this.outfitsID}}" aria-label="Favorite"
-        name="favorite"
-
-        {{#if favorite}} value="1"> <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-
-        {{else}} value="0"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>{{/if}}
-        </button>
-
-        <button type="button" class="btn btn-default delete" data-id="{{this.outfitsID}}" aria-label="Delete">
-        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button>
-
+  <div style="float:left">
+    <div>
+      <img src="{{outfitspath}}" alt="outfit" height="400" width="400">
     </div>
+
+    <button type="button" class="btn btn-default change-fav" data-id="{{this.outfitsID}}" aria-label="Favorite" name="favorite"
+      {{#if favorite}} value="1">
+      <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+
+      {{else}} value="0">
+      <span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span>{{/if}}
+    </button>
+
+    <button type="button" class="btn btn-default delete" data-id="{{this.outfitsID}}" aria-label="Delete">
+      <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    </button>
+
+  </div>
   {{/each}}
 </div>
 
-  <br>
-  <hr>
-  <br>
+<br>
+<hr>
+<br>
 
 <script src="/assets/js/outfitsjs.js"></script>
- 
-
