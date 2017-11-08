@@ -1,11 +1,35 @@
-<h4 id="saveoutfit">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img id="logo" src="/assets/images/logonav.jpg">
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="homeButton">
+          <a href="">home</a>
+        </li>
+        <li id="fullClosetButton">
+          <a href="">full closet</a>
+        </li>
+        <li id="createNewOutfitButton">
+          <a href="">create outfit</a>
+        </li>
+        <li id="myOutfitsButton" class="active">
+          <a href="">my outfits</a>
+        </li>
+      </ul>
+    </div>
+  </nav><h4 id="saveoutfit">My Outfits</h4>
 
+<div class="row">   
 
-  MY OUTFITS</h4>
+  <button id="btnaddbottoms" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning"  ></span>Upload</button>
+</div>
 
 <div id="savebox" class="container">
   {{#each outfits}}
-  <div style="float:left" class="imgDiv">
+  <div class="imgDiv">
     <div>
       <img src="{{outfitspath}}" alt="outfit" class="closetImg" height="200" width="200">
     </div>

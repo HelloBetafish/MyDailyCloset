@@ -1,4 +1,28 @@
-<h4 id="newoutfitname">CREATE NEW OUTFIT</h4>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">
+          <img id="logo" src="/assets/images/logonav.jpg">
+        </a>
+      </div>
+      <ul class="nav navbar-nav navbar-right">
+        <li id="homeButton">
+          <a href="">home</a>
+        </li>
+        <li id="fullClosetButton">
+          <a href="">full closet</a>
+        </li>
+        <li id="createNewOutfitButton" class="active">
+          <a href="">create outfit</a>
+        </li>
+        <li id="myOutfitsButton">
+          <a href="">my outfits</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <h4 id="newoutfitname">CREATE NEW OUTFIT</h4>
     <div class="row">
         <div class="col-md-2">
             <img id="woman" src="/assets/images/woman.jpg" width="355" height="375">
@@ -20,7 +44,7 @@
                     <div class="carousel-inner">
 
                         <div align="center" class="item active">
-                            <img src="/assets/images/blouseflower.jpg" alt="First Slide">
+                            <img src="/assets/images/carousel_tops_title.JPG" alt="First Slide" height="50px" width="400px">
                         </div>
 
                         {{#each carousel}} {{#if isTop}}
@@ -50,7 +74,7 @@
 
                     <div class="carousel-inner">
                         <div align="center" class="item active">
-                            <img src="/assets/images/jeans1.jpg" alt="First Slide">
+                            <img src="/assets/images/carousel_bottoms_title.JPG" alt="First Slide" height="150px" width="400px">
                         </div>
 
                         {{#each carousel}} {{#if isBottom}}
@@ -78,7 +102,7 @@
                     <!-- Wrapper for carousel items -->
                     <div class="carousel-inner">
                         <div align="center" class="item active">
-                            <img src="/assets/images/shoes2.jpg" alt="First Slide">
+                            <img src="/assets/images/carousel_shoes_title.JPG" alt="First Slide" height="50px" width="400px">
                         </div>
                         {{#each carousel}} {{#if isShoe}}
                         <div align="center" class="item">

@@ -6,12 +6,12 @@
 
 #womanpic {
 	margin-top:10%; 
-	left:15%; 
+	left:10%; 
 
 }
 #manpic {
 	margin-top:60%; 
-	left:48%; 
+	left:50%; 
 	z-index:3;
 	
 }
@@ -43,11 +43,11 @@
 	font-size: 11px;
 }
 
-#username{
+#usernameDiv{
 	margin-bottom: 5px;
 
 }
-#password{
+#passwordDiv{
 	margin-bottom: 5px;
 
 }
@@ -225,7 +225,13 @@ body {
     color: white;
 }
 
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #3d3c37;
+}
 
+.active a {
+  background-color: #a5a093 !important;
+}
 
 #logo{
   height: 230%;
