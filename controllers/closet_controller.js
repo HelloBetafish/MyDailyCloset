@@ -31,8 +31,14 @@ router.post("/api/login", function(req, res) {
 });
 // Index Home Page
 router.get("/home/:userID", function(req, res) {
-  res.render("home");
-  // refers to .handlebars file that will be inserted into main.handlebars.
+  var condition = "userID = " + req.params.userID + " LIMIT 1";
+  closet.displayOutfits(condition, function(data) {
+    var hbsObject = {
+      todaysOutfit: data
+    };
+    console.log(hbsObject);
+    res.render("home", hbsObject);
+  });
 });
 
 // Carousel Page
