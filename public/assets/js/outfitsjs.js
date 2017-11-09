@@ -63,9 +63,9 @@ $(function() {
       const fileUrl = result.filesUploaded[0].url;
       // $("#tops").append("<img src=" + fileUrl + " class=img-fluid img-rounded height=200 width=200>");
       // console.log(fileUrl);
-      $("#btnaddoutfit").attr("value", fileUrl);
-      var value = $("#btnaddoutfit").val();
-      console.log(value)
+      // $("#btnaddoutfit").attr("value", fileUrl);
+      // var value = $("#btnaddoutfit").val();
+      // console.log(value)
       // value has the path name, but for some reason it is not getting passed to mySQL
 
       var patharray = window.location.pathname.split( '/' );

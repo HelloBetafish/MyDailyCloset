@@ -93,7 +93,7 @@ router.post("/api/closet/:userID", function(req, res) {
 router.post("/outfits/:userID", function(req, res) {
   closet.uploadOutfit(
     ["outfitspath", "userID"],
-    [req.body.outfitpath, req.params.userID],
+    [req.body.outfitspath, req.params.userID],
     function(result) {
       // Send back the ID of the new outfit
       res.json({ id: result.insertId });
