@@ -1,23 +1,31 @@
 $(function() {
-    $(".login").on("submit", function(event) {
+  $(".login").on("submit", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
-    var newUser = { username: $("#username")
+    var newUser = {
+      username: $("#username")
         .val()
-        .trim(), password: $("#password")
+        .trim(),
+      password: $("#password")
         .val()
-        .trim() 
+        .trim()
     };
 
     console.log("newUser created");
 
     // Send the POST request.
-    $.ajax("/api/login", { type: "POST", data: newUser }).then(function(result) {
+    $.ajax("/api/login", { type: "POST", data: newUser }).then(function(
+      result
+    ) {
       console.log("A new user was created!");
       console.log(result);
-      // Reload the page to get the updated list
-      window.location.href = '/home/' + result;
+      if (result.length === 0) {
+        window.location.href = "/";
+      } else {
+        // Reload the page to get the updated list
+        window.location.href = "/home/" + result;
+      }
     });
   });
 
@@ -26,8 +34,7 @@ $(function() {
 
     var patharray = window.location.pathname.split("/");
     var userID = patharray[patharray.length - 1];
-    window.location.href = '/home/' + userID;
-    
+    window.location.href = "/home/" + userID;
   });
 
   $("#fullClosetButton").on("click", function(event) {
@@ -54,7 +61,7 @@ $(function() {
     window.location.href = "/outfits/" + userID;
   });
 
-// Home page additional side buttons
+  // Home page additional side buttons
   $("#btn1").on("click", function(event) {
     event.preventDefault();
 

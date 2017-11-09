@@ -24,8 +24,15 @@ router.post("/api/login", function(req, res) {
       // Send back the ID of the new burger
       //res.json({ id: result.insertId });
       console.log("query result");
-      console.log(result[0].userID);
-      res.json(result[0].userID);
+      console.log(result);
+      if (result.length === 0) {
+        //window.location.reload(true);
+        res.json(result);
+      }
+      else {
+        //console.log(result[0].userID);
+        res.json(result[0].userID);
+      }
     }
   );
 });
