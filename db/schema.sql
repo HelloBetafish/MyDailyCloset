@@ -6,6 +6,7 @@ CREATE TABLE users(
 userID int NOT NULL auto_increment,
 name VARCHAR(50),
 password VARCHAR(50) NOT NULL,
+createdAt TIMESTAMP NOT NULL,
 PRIMARY KEY(userID)
 );
 
@@ -13,6 +14,7 @@ CREATE TABLE clothes(
 clothesID int NOT NULL auto_increment,
 imagepath VARCHAR(100),
 favorite BOOLEAN NOT NULL DEFAULT 0,
+clothesType VARCHAR(50) NOT NULL,
 isTop BOOLEAN NOT NULL DEFAULT 0,
 isBottom BOOLEAN NOT NULL DEFAULT 0,
 isShoe BOOLEAN NOT NULL DEFAULT 0,
