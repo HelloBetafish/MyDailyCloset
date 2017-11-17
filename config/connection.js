@@ -9,8 +9,8 @@ else {
   connection = mysql.createConnection({
     port: 3306,
     host: "localhost",
-    user: "",
-    password: "r00t",
+    user: "root",
+    password: "",
     database: "closet_db"
   });
 };
