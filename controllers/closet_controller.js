@@ -86,15 +86,47 @@ router.get("/outfits/:userID", function(req, res) {
   });
 });
 
-router.post("/api/closet/:userID", function(req, res) {
-  closet.uploadClothes(
-    ["imagepath", "clothestype", "userID"],
-    [imagepath, req.body.clothestype, req.params.userID],
-    function(result) {
-      // Send back the ID of the new item
-      res.json({ id: result.insertId });
-    }
-  );
+router.post("/closet/:userID", function(req, res) {
+  if(req.body.clothesType === "top"){
+    closet.uploadClothes(
+      ["imagepath", "clothesType", "isTop", "userID"],
+      [req.body.imagepath, req.body.clothesType, 1, req.params.userID],
+      function(result) {
+        // Send back the ID of the new item
+        res.json({ id: result.insertId });
+      }
+    );
+  }
+  else if(req.body.clothesType === "bottom"){
+    closet.uploadClothes(
+      ["imagepath", "clothesType", "isBottom", "userID"],
+      [req.body.imagepath, req.body.clothesType, 1, req.params.userID],
+      function(result) {
+        // Send back the ID of the new item
+        res.json({ id: result.insertId });
+      }
+    );
+  }
+  else if(req.body.clothesType === "shoes"){
+    closet.uploadClothes(
+      ["imagepath", "clothesType", "isShoe", "userID"],
+      [req.body.imagepath, req.body.clothesType, 1, req.params.userID],
+      function(result) {
+        // Send back the ID of the new item
+        res.json({ id: result.insertId });
+      }
+    );
+  }
+  else if(req.body.clothesType === "accessory"){
+    closet.uploadClothes(
+      ["imagepath", "clothesType", "isAcc", "userID"],
+      [req.body.imagepath, req.body.clothesType, 1, req.params.userID],
+      function(result) {
+        // Send back the ID of the new item
+        res.json({ id: result.insertId });
+      }
+    );
+  }
 });
 
 router.post("/outfits/:userID", function(req, res) {

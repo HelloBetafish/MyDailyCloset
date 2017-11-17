@@ -75,11 +75,11 @@ and pass image to mySQL dtabase*/
       var newClothes = {
         imagepath: fileUrl,
         userID: userID,
-        isTop: 1
+        clothesType: "top",
       };
 
       // Send the POST request.
-      $.ajax("/api/closet/:userID/", {
+      $.ajax("/closet/" + userID, {
         type: "POST",
         data: newClothes
       }).then(
@@ -110,11 +110,11 @@ and pass image to mySQL dtabase*/
       var newClothes = {
         imagepath: fileUrl,
         userID: userID,
-        isBottom: 1
+        clothesType: "bottom",
       };
 
       // Send the POST request.
-      $.ajax("/api/closet/:userID/", {
+      $.ajax("/closet/" + userID, {
         type: "POST",
         data: newClothes
       }).then(
@@ -145,11 +145,11 @@ and pass image to mySQL dtabase*/
       var newClothes = {
         imagepath: fileUrl,
         userID: userID,
-        isShoe: 1
+        clothesType: "shoes",
       };
 
       // Send the POST request.
-      $.ajax("/api/closet/:userID/", {
+      $.ajax("/closet/" + userID, {
         type: "POST",
         data: newClothes
       }).then(
@@ -180,11 +180,11 @@ and pass image to mySQL dtabase*/
       var newClothes = {
         imagepath: fileUrl,
         userID: userID,
-        isAcc: 1
+        clothesType: "accessory",
       };
 
       // Send the POST request.
-      $.ajax("/api/closet/:userID/", {
+      $.ajax("/closet/" + userID, {
         type: "POST",
         data: newClothes
       }).then(
