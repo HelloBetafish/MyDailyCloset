@@ -28,12 +28,12 @@ $(function() {
       type: "PUT",
       data: newFavState
     }).then(
-      function() {
-        console.log("changed favorite: ", changeFavState);
+    function() {
+      console.log("changed favorite: ", changeFavState);
         // Reload the page to get the updated list
         location.reload();
       }
-    );
+      );
   });
 
   $(".delete").on("click", function(event) {
@@ -43,15 +43,15 @@ $(function() {
     $.ajax("/outfits/:userID/" + id, {
       type: "DELETE",
     }).then(
-      function() {
-        console.log("deleted outfit: ", id);
+    function() {
+      console.log("deleted outfit: ", id);
         // Reload the page to get the updated list
         location.reload();
       }
-    );
+      );
   });
 
-    $("#btnaddoutfit").on("click", function(event) {
+  $("#btnaddoutfit").on("click", function(event) {
     event.preventDefault();
 
     var fsClient = filestack.init('AXodQkfA4Soq1kmjeI2Vbz');

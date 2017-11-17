@@ -3,38 +3,37 @@
 <head>
   <title>Full Closet page 4</title>
 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Vollkorn" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cinzel|Tangerine" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento|Varela" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 
- <!--Fonts-->
- <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Vollkorn" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Cinzel|Tangerine" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Quattrocento|Varela" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
- <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+  <!--Jquery-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--Jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!--Boostrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-    <!--Boostrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/assets/css/closet_style.css">
 
-     <link rel="stylesheet" type="text/css" href="/assets/css/closet_style.css">
-
-     <!-- jQuery latest library -->
-    
-     <script
+  <!-- jQuery latest library -->
+  
+  <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-     
-     <!-- jQuery latest library -->
-   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+  
+  <!-- jQuery latest library -->
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-   <script src="https://static.filestackapi.com/v3/filestack.js"></script>
+  <script src="https://static.filestackapi.com/v3/filestack.js"></script>
 
 </head>
 <body>
@@ -53,94 +52,78 @@
     </div>
   </nav>
 
-
-
-
-<div class="row">
- <div class="col-md-12"> 
-  <h4 id="mycloset">MY CLOSET</h4>
- </div>
+  <div class="row">
+   <div class="col-md-12"> 
+    <h4 id="mycloset">MY CLOSET</h4>
+  </div>
 </div>
-
-
 
 <div id="fullcontainer" class="container">
   <!-- <div class="row"> -->
     <div class="col-md-12">
       
-          <div class="row"> 
-             <!-- <h5 id="topstitle">TOPS</h5> -->
-                  <img id="topmale" src="/assets/images/topmale.jpg" width="80" height="80">
-                  <img id="blouse3" src="/assets/images/blousehanger3.jpg" width="80" height="80">
+      <div class="row"> 
+       <!-- <h5 id="topstitle">TOPS</h5> -->
+       <img id="topmale" src="/assets/images/topmale.jpg" width="80" height="80">
+       <img id="blouse3" src="/assets/images/blousehanger3.jpg" width="80" height="80">
 
-                  <button id="btnaddtops" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" onclick="return addimage_onclick(1)" ></span>Upload</button>
-          </div>
-                  <div id="topbox" class="row"> 
-                  <div id="tops"></div>
-                      <a href="#">
-                      <img class="img-fluid"   class="img-rounded" id="image-1" onclick="return addimage_onclick(1)" height=200 width=200> 
-                     </a>
+       <button id="btnaddtops" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" onclick="return addimage_onclick(1)" ></span>Upload</button>
+     </div>
+     <div id="topbox" class="row"> 
+      <div id="tops"></div>
+      <a href="#">
+        <img class="img-fluid"   class="img-rounded" id="image-1" onclick="return addimage_onclick(1)" height=200 width=200> 
+      </a>
 
-                     
-                  </div>
+    </div>
 
-              <div class="row">   
-             <!--  <h5 id="bottomtitle">BOTTOMS</h5> -->
-                     <img id="jeans3" src="/assets/images/botton3.jpg" width="40" height="70">
-                     <img id="skirt1" src="/assets/images/skirt.jpg" width="60" height="60">
-                     <button id="btnaddbottoms" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning"  ></span>Upload</button>
-              </div>
-                <div id="bottombox" class="row"> 
-                   <div id="bottoms"></div>
-                     <img src="/assets/images/accesories3.jpg" width="100" height="100">
-                     <img src="/assets/images/accesories3.jpg" width="100" height="100">
-                </div>
-  
+    <div class="row">   
+     <!--  <h5 id="bottomtitle">BOTTOMS</h5> -->
+     <img id="jeans3" src="/assets/images/botton3.jpg" width="40" height="70">
+     <img id="skirt1" src="/assets/images/skirt.jpg" width="60" height="60">
+     <button id="btnaddbottoms" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning"  ></span>Upload</button>
+   </div>
+   <div id="bottombox" class="row"> 
+     <div id="bottoms"></div>
+     <img src="/assets/images/accesories3.jpg" width="100" height="100">
+     <img src="/assets/images/accesories3.jpg" width="100" height="100">
+   </div>
 
-              <div class="row"> 
-             <!--  <h5 id="bottomtitle">SHOES</h5>  -->
-                     <img id="shoesman" src="/assets/images/shoesmen2.jpg" width="70" height="70">
-                     <img id="shoeswoman1" src="/assets/images/shoeswoman2.jpg" width="65" height="65">
-                     <button id="btnaddshoes" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>Upload</button>
-              </div>
+   <div class="row"> 
+     <!--  <h5 id="bottomtitle">SHOES</h5>  -->
+     <img id="shoesman" src="/assets/images/shoesmen2.jpg" width="70" height="70">
+     <img id="shoeswoman1" src="/assets/images/shoeswoman2.jpg" width="65" height="65">
+     <button id="btnaddshoes" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>Upload</button>
+   </div>
 
-                <div id="shoesbox" class="row"> 
-                   <div id="shoes"></div>
-                     <img src="/assets/images/accesories3.jpg" width="100" height="100">
-                     <img src="/assets/images/accesories3.jpg" width="100" height="100">
-                 </div>
-             </div>
+   <div id="shoesbox" class="row"> 
+     <div id="shoes"></div>
+     <img src="/assets/images/accesories3.jpg" width="100" height="100">
+     <img src="/assets/images/accesories3.jpg" width="100" height="100">
+   </div>
+ </div>
 
-               <div class="row"> 
-             <!--  <h5 id="bottomtitle">ACCESSORIES</h5> -->
-                     <img id="accessman" src="/assets/images/clothingmen.jpg" width="60" height="70">
-                     <img id="accesswoman" src="/assets/images/accesories3.jpg" width="80" height="80">
-                     <button id="btnaddaccessories" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>upload</button>
-              </div>
-                  
-                <div id="accessoriesbox" class="row">    
-                   <div id="accessories"></div>
-                     <img src="/assets/images/accesories3.jpg" width="100" height="100">
-                     <img src="/assets/images/accesories3.jpg" width="100" height="100">
-                </div>
-
-  
-</div>
-</div>
-
-
-
-
-
-
-
-</div>
+ <div class="row"> 
+   <!--  <h5 id="bottomtitle">ACCESSORIES</h5> -->
+   <img id="accessman" src="/assets/images/clothingmen.jpg" width="60" height="70">
+   <img id="accesswoman" src="/assets/images/accesories3.jpg" width="80" height="80">
+   <button id="btnaddaccessories" class="btn icon-btn btn-warning" href="#"><span class="glyphicon btn-glyphicon glyphicon-plus img-circle text-warning" ></span>upload</button>
+ </div>
  
+ <div id="accessoriesbox" class="row">    
+   <div id="accessories"></div>
+   <img src="/assets/images/accesories3.jpg" width="100" height="100">
+   <img src="/assets/images/accesories3.jpg" width="100" height="100">
+ </div>
+ 
+</div>
+</div>
+
+</div>
+
 <script type="text/javascript">  
-
-       
  
-function addimage_onclick(num) {
+  function addimage_onclick(num) {
     event.preventDefault();
 
     const link = document.getElementById('url');
@@ -148,27 +131,17 @@ function addimage_onclick(num) {
     const client = filestack.init('AXodQkfA4Soq1kmjeI2Vbz');
 
     client.pick({
-        accept: 'image/*',
-        storeTo: { path: '/assets/images/' }
+      accept: 'image/*',
+      storeTo: { path: '/assets/images/' }
     }).then(function(result) {
-        const fileUrl = result.filesUploaded[0].url;
-        $("#image-" + num).replaceWith("<img src=" + fileUrl + " height=200 width=200 class=img-fluid>");
-        link.href = fileUrl;
-        link.innerHTML = fileUrl;
+      const fileUrl = result.filesUploaded[0].url;
+      $("#image-" + num).replaceWith("<img src=" + fileUrl + " height=200 width=200 class=img-fluid>");
+      link.href = fileUrl;
+      link.innerHTML = fileUrl;
     });
+  }
 
-
-}
-
-
-
-
-
- </script>
-
-
-
-
+</script>
 
 </body>
 </html>

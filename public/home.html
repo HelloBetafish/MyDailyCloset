@@ -3,7 +3,6 @@
 <head>
 	<title>Home</title>
 
-
  <meta charset="utf-8">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -14,31 +13,30 @@
  <link href="https://fonts.googleapis.com/css?family=Quattrocento|Varela" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Quattrocento" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
-	  <!--Jquery-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!--Jquery-->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-    <!--Boostrap-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+ <!--Boostrap-->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
-     <link rel="stylesheet" type="text/css" href="/assets/css/closet_style.css">
+ <link rel="stylesheet" type="text/css" href="/assets/css/closet_style.css">
 
-     <!-- jQuery latest library -->
-    
-     <script
-  src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
+ <!-- jQuery latest library -->
+ 
+ <script
+ src="https://code.jquery.com/jquery-3.2.1.min.js"
+ integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+ crossorigin="anonymous"></script>
 
-      <!-- bootstrap js library -->
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-     
-     <!-- jQuery latest library -->
-   <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+ <!-- bootstrap js library -->
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+ <!-- jQuery latest library -->
+ <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
 </head>
 <body>
-
 
   <nav class="navbar navbar-default">
     <div class="container-fluid">
@@ -54,12 +52,10 @@
     </div>
   </nav>
 
-
-
-<div class="row">
- <div class="col-md-12"> 
-  <h4 id="todaysoutfit">TODAY'S OUTFIT</h4>
- </div>
+  <div class="row">
+   <div class="col-md-12"> 
+    <h4 id="todaysoutfit">TODAY'S OUTFIT</h4>
+  </div>
 </div>
 
 <!-- <div id="calendarbox" class="container"> -->
@@ -68,76 +64,66 @@
 
     <!-- <h5 style="margin-right: 15px;" class="text">Today Nov 8th</h5> -->
 
+    <div id="outfit"></div>
+    <h5 style="margin-left:265px;" class="text">Today Nov 8th</h5>
 
-      
-      <div id="outfit"></div>
-       <h5 style="margin-left:265px;" class="text">Today Nov 8th</h5>
-
-      <img style="margin-left:140px;" id="redoutfit" src="/assets/images/Red-Outfit.jpg" width="400" height="400" class='closet-image'>
-      </div>
+    <img style="margin-left:140px;" id="redoutfit" src="/assets/images/Red-Outfit.jpg" width="400" height="400" class='closet-image'>
+  </div>
 
   <!-- calendar-->
-      <div class="col-md-4">
-      <div style="margin-left:90px;" id="calendar"></div>
-      </div>
+  <div class="col-md-4">
+    <div style="margin-left:90px;" id="calendar"></div>
+  </div>
 
   <!-- buttons-->  
   <div  class="col-md-4">
-          <h5 style="margin-left:75px;" id="title">WHAT WOULD YOU LIKE TO DO NEXT?</h5>
-        <div class="col-md-3">
-            <h5 style="margin-left:50px;" class="title1">View</h5>
-            <h5 style="margin-left:50px;" class="title2">Create</h5>
-            <h5 style="margin-left:50px;" class="title3">View</h5>
-        </div>
+    <h5 style="margin-left:75px;" id="title">WHAT WOULD YOU LIKE TO DO NEXT?</h5>
+    <div class="col-md-3">
+      <h5 style="margin-left:50px;" class="title1">View</h5>
+      <h5 style="margin-left:50px;" class="title2">Create</h5>
+      <h5 style="margin-left:50px;" class="title3">View</h5>
+    </div>
 
-        <div class="col-md-1">
-            <button style="margin-left:20px;" id="btn1" type="button" class="btn btn-warning" onclick="return fullcloset_onclick()" >full closet</button>
+    <div class="col-md-1">
+      <button style="margin-left:20px;" id="btn1" type="button" class="btn btn-warning" onclick="return fullcloset_onclick()" >full closet</button>
 
-            <button style="margin-left:20px;" id="btn2" type="button" class="btn btn-warning" onclick="return newoutfit_onclick()" >New Outfits</button>
+      <button style="margin-left:20px;" id="btn2" type="button" class="btn btn-warning" onclick="return newoutfit_onclick()" >New Outfits</button>
 
-            <button style="margin-left:20px;" id="btn3" type="button" class="btn btn-warning" onclick="return saveoutfit_onclick()">save Outfit</button>
-        </div>
-     </div>
-   </div>
+      <button style="margin-left:20px;" id="btn3" type="button" class="btn btn-warning" onclick="return saveoutfit_onclick()">save Outfit</button>
+    </div>
+  </div>
+</div>
 <!-- </div> -->
- <!--- Illustrations in the bottom -->
+<!--- Illustrations in the bottom -->
 
-   <div class="row">
-     <div class="col-md-12">
-       <img id="blouseimg" src="/assets/images/blousehanger3.jpg" width="200" height="200" class='closet-image'>
-       <img id="jacket" src="/assets/images/topmale.jpg" width="200" height="200" class='closet-image'>
-       <img id="shoesmen" src="/assets/images/shoes7.jpg" width="200" height="200" class='closet-image'>
-       <img id="shoeswoman" src="/assets/images/shoeswoman2.jpg" width="180" height="180" class='closet-image'>
-       <img id="jeans" src="/assets/images/botton3.jpg" width="100" height="160" class='closet-image'>
-       <img id="accessoriesimg1" src="/assets/images/accesories1.jpg" width="140" height="160" class='closet-image'>
-     </div>
-   </div>
+<div class="row">
+ <div class="col-md-12">
+   <img id="blouseimg" src="/assets/images/blousehanger3.jpg" width="200" height="200" class='closet-image'>
+   <img id="jacket" src="/assets/images/topmale.jpg" width="200" height="200" class='closet-image'>
+   <img id="shoesmen" src="/assets/images/shoes7.jpg" width="200" height="200" class='closet-image'>
+   <img id="shoeswoman" src="/assets/images/shoeswoman2.jpg" width="180" height="180" class='closet-image'>
+   <img id="jeans" src="/assets/images/botton3.jpg" width="100" height="160" class='closet-image'>
+   <img id="accessoriesimg1" src="/assets/images/accesories1.jpg" width="140" height="160" class='closet-image'>
+ </div>
+</div>
 
 <!--end of the Illustrations container-->
 
+<script type="text/javascript">  
 
- 
- 
-   
-  <script type="text/javascript">  
+ function fullcloset_onclick() {
+  window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/fullcloset.html";
+}
 
+function newoutfit_onclick() {
+  window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/createnewoutfit.html";
+}
 
-   function fullcloset_onclick() {
-            window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/fullcloset.html";
-        }
+function saveoutfit_onclick() {
+  window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/saveoutfit.html";
+}
 
-  function newoutfit_onclick() {
-            window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/createnewoutfit.html";
-        }
-
-  function saveoutfit_onclick() {
-            window.location.href = "file:///Users/reynaperezmillan/Documents/Bootcamp/PROYECTS/MyDailyCloset/public/saveoutfit.html";
-        }
- 
-
-
-
-  !function() {
+!function() {
 
   var today = moment();
 
@@ -195,7 +181,7 @@
     
     this.events.forEach(function(ev) {
      ev.date = self.current.clone().date(Math.random() * (29 - 1) + 1);
-    });
+   });
     
     
     if(this.month) {
@@ -213,12 +199,12 @@
         }, 16);
       });
     } else {
-        this.month = createElement('div', 'month');
-        this.el.appendChild(this.month);
-        this.backFill();
-        this.currentMonth();
-        this.fowardFill();
-        this.month.className = 'month new';
+      this.month = createElement('div', 'month');
+      this.el.appendChild(this.month);
+      this.backFill();
+      this.currentMonth();
+      this.fowardFill();
+      this.month.className = 'month new';
     }
   }
 
@@ -460,28 +446,26 @@
 
 !function() {
   var data = [
-    { eventName: 'Red outfit office meeting', calendar: 'Work', color: 'orange' },
-    { eventName: 'black pants with leather jacket  - Jr. Web Developer', calendar: 'Work', color: 'orange' },
-    { eventName: 'Blue skirt and white blouse with red necklace / conference with japanese', calendar: 'Work', color: 'orange' },
-    { eventName: 'Black dress, gold heels and pearl necklace - Dinner w/ Marketing', calendar: 'Work', color: 'orange' },
+  { eventName: 'Red outfit office meeting', calendar: 'Work', color: 'orange' },
+  { eventName: 'black pants with leather jacket  - Jr. Web Developer', calendar: 'Work', color: 'orange' },
+  { eventName: 'Blue skirt and white blouse with red necklace / conference with japanese', calendar: 'Work', color: 'orange' },
+  { eventName: 'Black dress, gold heels and pearl necklace - Dinner w/ Marketing', calendar: 'Work', color: 'orange' },
 
-    { eventName: 'Jeans and colorfull shirt - Game vs Portalnd', calendar: 'Sports', color: 'orange' },
-    { eventName: 'white shorts and pink top and tennis shoes and Game vs Houston', calendar: 'Sports', color: 'orange' },
-    { eventName: 'warm blue sweater and jeans - Game vs Denver', calendar: 'Sports', color: 'orange' },
-    { eventName: 'Yellow jacket, jeans and red sandals - Game vs San Degio', calendar: 'Sports', color: 'orange' },
+  { eventName: 'Jeans and colorfull shirt - Game vs Portalnd', calendar: 'Sports', color: 'orange' },
+  { eventName: 'white shorts and pink top and tennis shoes and Game vs Houston', calendar: 'Sports', color: 'orange' },
+  { eventName: 'warm blue sweater and jeans - Game vs Denver', calendar: 'Sports', color: 'orange' },
+  { eventName: 'Yellow jacket, jeans and red sandals - Game vs San Degio', calendar: 'Sports', color: 'orange' },
 
-    { eventName: 'Orange dresss with beige heels - School Play', calendar: 'Kids', color: 'orange' },
-    { eventName: 'Flowerly blouse, white skirt and blue flat shoes - Parent/Teacher Conference', calendar: 'Kids', color: 'orange' },
-    { eventName: 'Jeans, blue shirt and blue tennis shoes - Pick up from Soccer Practice', calendar: 'Kids', color: 'orange' },
-    { eventName: 'colorful outfit - Ice Cream Night', calendar: 'Kids', color: 'orange' },
+  { eventName: 'Orange dresss with beige heels - School Play', calendar: 'Kids', color: 'orange' },
+  { eventName: 'Flowerly blouse, white skirt and blue flat shoes - Parent/Teacher Conference', calendar: 'Kids', color: 'orange' },
+  { eventName: 'Jeans, blue shirt and blue tennis shoes - Pick up from Soccer Practice', calendar: 'Kids', color: 'orange' },
+  { eventName: 'colorful outfit - Ice Cream Night', calendar: 'Kids', color: 'orange' },
 
-    { eventName: 'My regular casual outfit with blue hat Free Tamale Night', calendar: 'Other', color: 'orange' },
-    { eventName: 'Fushia pink shirt and jeans - Bowling Team', calendar: 'Other', color: 'orange' },
-    { eventName: 'White dress and pink flat shoes - Teach Kids to Code', calendar: 'Other', color: 'orange' },
-    { eventName: 'Red-Outfit - Startup Weekend', calendar: 'Other', color: 'orange' }
+  { eventName: 'My regular casual outfit with blue hat Free Tamale Night', calendar: 'Other', color: 'orange' },
+  { eventName: 'Fushia pink shirt and jeans - Bowling Team', calendar: 'Other', color: 'orange' },
+  { eventName: 'White dress and pink flat shoes - Teach Kids to Code', calendar: 'Other', color: 'orange' },
+  { eventName: 'Red-Outfit - Startup Weekend', calendar: 'Other', color: 'orange' }
   ];
-
-
 
   function addDate(ev) {
     
@@ -490,13 +474,9 @@
   var calendar = new Calendar('#calendar', data);
 
 }();
- 
 
 
- 
- </script>
-
-
+</script>
 
 </body>
 </html>
